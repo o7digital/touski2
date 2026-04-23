@@ -142,10 +142,10 @@ export default function App() {
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url(${item.image})` }}
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,10,9,0.12)_0%,rgba(6,12,10,0.54)_50%,rgba(3,6,6,0.82)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_22%,rgba(255,220,170,0.14),transparent_24%),radial-gradient(circle_at_82%_16%,rgba(200,220,255,0.14),transparent_20%)]" />
-            <div className={`absolute inset-x-0 bottom-0 h-[45%] ${item.mountainA} opacity-90 [clip-path:polygon(0_60%,16%_46%,32%_57%,49%_35%,66%_52%,84%_37%,100%_55%,100%_100%,0_100%)]`} />
-            <div className={`absolute inset-x-0 bottom-0 h-[30%] ${item.mountainB} opacity-95 [clip-path:polygon(0_72%,18%_56%,35%_66%,51%_49%,67%_60%,82%_44%,100%_58%,100%_100%,0_100%)]`} />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,10,9,0.08)_0%,rgba(6,12,10,0.30)_50%,rgba(3,6,6,0.52)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_22%,rgba(255,220,170,0.10),transparent_24%),radial-gradient(circle_at_82%_16%,rgba(200,220,255,0.10),transparent_20%)]" />
+            <div className={`absolute inset-x-0 bottom-0 h-[32%] ${item.mountainA} opacity-60 [clip-path:polygon(0_60%,16%_46%,32%_57%,49%_35%,66%_52%,84%_37%,100%_55%,100%_100%,0_100%)]`} />
+            <div className={`absolute inset-x-0 bottom-0 h-[20%] ${item.mountainB} opacity-65 [clip-path:polygon(0_72%,18%_56%,35%_66%,51%_49%,67%_60%,82%_44%,100%_58%,100%_100%,0_100%)]`} />
           </div>
         ))}
 
@@ -154,12 +154,12 @@ export default function App() {
 
         <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col px-6 py-6 lg:px-10">
           <header className="relative flex items-center justify-between rounded-full border border-white/15 bg-black/25 px-4 py-3 backdrop-blur-xl shadow-xl shadow-black/30">
-            <div className="flex items-center pl-56">
-              <div className="absolute -bottom-16 left-5 z-20 h-72 w-72 overflow-hidden rounded-[2.5rem] border border-white/25 bg-white p-3 shadow-2xl shadow-black/40">
+            <div className="flex items-center pl-40">
+              <div className="absolute -bottom-8 left-5 z-20 h-28 w-28 overflow-hidden rounded-[1.5rem] border border-white/25 bg-white p-1.5 shadow-2xl shadow-black/40">
                 <img
                   src={touskiLogo}
                   alt="Logo TOUSKI"
-                  className="h-full w-full rounded-[2rem] object-cover"
+                  className="h-full w-full rounded-[1.2rem] object-cover"
                 />
               </div>
               <div>
