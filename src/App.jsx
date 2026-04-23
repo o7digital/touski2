@@ -175,7 +175,7 @@ export default function App() {
             </nav>
           </header>
 
-          <div className="relative flex flex-1 items-center py-12 lg:py-20">
+          <div className="relative flex flex-1 items-start py-12 pt-40 lg:py-20 lg:pt-52">
             <div className="grid w-full gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div className="max-w-4xl">
                 <div className="mb-6 inline-flex rounded-full border border-white/20 bg-black/25 px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/90 backdrop-blur">
