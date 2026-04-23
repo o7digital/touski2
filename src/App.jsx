@@ -35,7 +35,7 @@ const heroSlides = [
     title: "Vêtements techniques et protection de haute montagne.",
     text: "Slide prévu pour photo vêtements techniques/alpinisme.",
     accent: "Alpinisme • Vêtements • Sécurité",
-    image: "/slider/Gemini_Generated_Image_bzhmetbzhmetbzhm.png",
+    image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.png",
     fallback:
       "bg-[linear-gradient(180deg,#c5a57a_0%,#886a4d_22%,#3c2f27_52%,#100d0c_100%)]",
     mountainA: "bg-[#241b16]",
@@ -43,6 +43,20 @@ const heroSlides = [
     glass: "bg-black/25",
     tag1: "Alpinisme technique",
     tag2: "Protection & performance",
+  },
+  {
+    eyebrow: "Exploration & sécurité",
+    title: "Repérage terrain et autonomie en conditions réelles.",
+    text: "Slide prévu pour photo exploration/sécurité outdoor.",
+    accent: "Exploration • Mission • Sécurité",
+    image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.png",
+    fallback:
+      "bg-[linear-gradient(180deg,#b6b9ad_0%,#6a705f_24%,#2d3228_54%,#0f120f_100%)]",
+    mountainA: "bg-[#1a1f18]",
+    mountainB: "bg-[#0d100d]",
+    glass: "bg-black/25",
+    tag1: "Sécurité outdoor",
+    tag2: "Terrain & autonomie",
   },
 ];
 
@@ -175,7 +189,7 @@ export default function App() {
             </nav>
           </header>
 
-          <div className="relative flex flex-1 items-start py-12 pt-40 lg:py-20 lg:pt-52">
+          <div className="relative flex flex-1 items-start py-12 pt-72 lg:py-20 lg:pt-[26rem]">
             <div className="grid w-full gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div className="max-w-4xl">
                 <div className="mb-6 inline-flex rounded-full border border-white/20 bg-black/25 px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/90 backdrop-blur">
