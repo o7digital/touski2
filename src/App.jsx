@@ -7,7 +7,7 @@ const heroSlides = [
     title: "Terrain, altitude et liberté de mouvement.",
     text: "Slide prévu pour photo trekking/randonnée en plein écran.",
     accent: "Trekking • Randonnée • Nature",
-    image: "/hero/trekking.jpg",
+    image: "/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.png",
     fallback:
       "bg-[linear-gradient(180deg,#8ca58f_0%,#5b725f_20%,#24322a_52%,#0c1411_100%)]",
     mountainA: "bg-[#16221c]",
@@ -21,7 +21,7 @@ const heroSlides = [
     title: "GPS haute montagne et autonomie réelle.",
     text: "Slide prévu pour photo GPS/alpinisme en conditions extrêmes.",
     accent: "GPS • Sécurité • Autonomie • Altitude",
-    image: "/hero/gps-alpinisme.jpg",
+    image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.png",
     fallback:
       "bg-[linear-gradient(180deg,#b4bfc8_0%,#738693_20%,#303f48_52%,#0c1318_100%)]",
     mountainA: "bg-[#17222a]",
@@ -35,7 +35,7 @@ const heroSlides = [
     title: "Vêtements techniques et protection de haute montagne.",
     text: "Slide prévu pour photo vêtements techniques/alpinisme.",
     accent: "Alpinisme • Vêtements • Sécurité",
-    image: "/hero/vetements-haute-montagne.jpg",
+    image: "/slider/Gemini_Generated_Image_bzhmetbzhmetbzhm.png",
     fallback:
       "bg-[linear-gradient(180deg,#c5a57a_0%,#886a4d_22%,#3c2f27_52%,#100d0c_100%)]",
     mountainA: "bg-[#241b16]",
@@ -154,12 +154,12 @@ export default function App() {
 
         <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col px-6 py-6 lg:px-10">
           <header className="relative flex items-center justify-between rounded-full border border-white/15 bg-black/25 px-4 py-3 backdrop-blur-xl shadow-xl shadow-black/30">
-            <div className="flex items-center pl-36">
-              <div className="absolute -bottom-5 left-5 z-20 h-24 w-24 overflow-hidden rounded-[1.4rem] border border-white/25 bg-white p-1.5 shadow-2xl shadow-black/40">
+            <div className="flex items-center pl-56">
+              <div className="absolute -bottom-16 left-5 z-20 h-72 w-72 overflow-hidden rounded-[2.5rem] border border-white/25 bg-white p-3 shadow-2xl shadow-black/40">
                 <img
                   src={touskiLogo}
                   alt="Logo TOUSKI"
-                  className="h-full w-full rounded-[1.1rem] object-cover"
+                  className="h-full w-full rounded-[2rem] object-cover"
                 />
               </div>
               <div>
