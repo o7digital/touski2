@@ -205,11 +205,18 @@ export default function AppEn() {
                 <p className="text-lg font-semibold tracking-[0.35em]">TOUSKI</p>
               </div>
             </div>
-            <nav className="hidden gap-8 text-sm text-white/80 md:flex">
+            <nav className="hidden items-center gap-8 text-sm text-white/80 md:flex">
               <a href="#univers" className="hover:text-white">Universe</a>
               <a href="#categories" className="hover:text-white">Categories</a>
               <a href="#selection" className="hover:text-white">Selection</a>
               <a href="#vision" className="hover:text-white">Vision</a>
+              <a
+                href="/"
+                className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
+                aria-label="Switch to French"
+              >
+                FR
+              </a>
             </nav>
           </header>
 
