@@ -129,6 +129,30 @@ const stats = [
   { value: "100%", label: "Indispensable" },
 ];
 
+const localSeoKeywords = [
+  "touski Quebec Saint Elie de Caxton",
+  "touski canada Quebec Saint Elie de Caxton",
+  "équipement montagne Quebec Saint Elie de Caxton",
+  "équipement trekking Quebec Saint Elie de Caxton",
+  "matériel randonnée Quebec Saint Elie de Caxton",
+  "gps haute montagne Quebec Saint Elie de Caxton",
+  "gps alpinisme Quebec Saint Elie de Caxton",
+  "sécurité outdoor Quebec Saint Elie de Caxton",
+  "drone sécurité outdoor Quebec Saint Elie de Caxton",
+  "drone surveillance nature Quebec Saint Elie de Caxton",
+  "équipement alpinisme Quebec Saint Elie de Caxton",
+  "vêtements techniques montagne Quebec Saint Elie de Caxton",
+  "accessoires nature Quebec Saint Elie de Caxton",
+  "équipement exploration Quebec Saint Elie de Caxton",
+  "équipement expédition Quebec Saint Elie de Caxton",
+  "orientation montagne Quebec Saint Elie de Caxton",
+  "autonomie outdoor Quebec Saint Elie de Caxton",
+  "survie douce Quebec Saint Elie de Caxton",
+  "essentiels maison Quebec Saint Elie de Caxton",
+  "équipement chalet Quebec Saint Elie de Caxton",
+  "indispensables plein air Quebec Saint Elie de Caxton",
+];
+
 export default function App() {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -373,6 +397,23 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      <footer className="border-t border-white/10 bg-[#070f0c]">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
+          <h2 className="text-2xl font-semibold">TOUSKI au Quebec, Saint Elie de Caxton</h2>
+          <p className="mt-4 max-w-4xl text-sm leading-7 text-white/70">
+            TOUSKI propose de l'équipement montagne, du matériel trekking et randonnée, des solutions GPS haute montagne,
+            des drones de sécurité outdoor, de l'équipement alpinisme et des essentiels maison pour Quebec, Saint Elie de Caxton.
+          </p>
+          <p className="mt-4 max-w-4xl text-sm leading-7 text-white/70">
+            La sélection couvre aussi les vêtements techniques montagne, l'orientation, l'autonomie outdoor, l'exploration,
+            l'expédition, la survie douce et l'équipement chalet pour un usage concret sur le terrain.
+          </p>
+          <p className="mt-6 text-xs leading-6 text-white/55">
+            {localSeoKeywords.join(" • ")}
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
