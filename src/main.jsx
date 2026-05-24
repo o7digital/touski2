@@ -2,6 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import AppEn from './AppEn.jsx'
+import AppEs from './AppEs.jsx'
+import AppDe from './AppDe.jsx'
 
 const isEnglish = window.location.pathname === '/en' || window.location.pathname.startsWith('/en/')
 const isSpanish = window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')
@@ -42,6 +45,6 @@ ensureLink('alternate', `${siteUrl}/`, 'x-default')
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App locale={isGerman ? 'de' : isSpanish ? 'es' : isEnglish ? 'en' : 'fr'} />
+    {isGerman ? <AppDe /> : isSpanish ? <AppEs /> : isEnglish ? <AppEn /> : <App />}
   </StrictMode>,
 )
