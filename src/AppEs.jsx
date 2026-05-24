@@ -175,7 +175,6 @@ export default function AppEs() {
                 />
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.35em] text-orange-200/85">Logo conservado</p>
                 <p className="text-lg font-semibold tracking-[0.35em]">TOUSKI</p>
               </div>
             </div>
