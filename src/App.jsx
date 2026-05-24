@@ -139,7 +139,30 @@ const localSeoGroups = [
 ];
 
 
-export default function App() {
+export default function App({ locale = "fr" }) {
+  const langLinks = {
+    fr: [
+      { href: "/en", label: "EN", aria: "Passer en anglais" },
+      { href: "/es", label: "ES", aria: "Pasar a espanol" },
+      { href: "/de", label: "DE", aria: "Passer en allemand" },
+    ],
+    en: [
+      { href: "/", label: "FR", aria: "Switch to French" },
+      { href: "/es", label: "ES", aria: "Switch to Spanish" },
+      { href: "/de", label: "DE", aria: "Switch to German" },
+    ],
+    es: [
+      { href: "/", label: "FR", aria: "Cambiar a frances" },
+      { href: "/en", label: "EN", aria: "Switch to English" },
+      { href: "/de", label: "DE", aria: "Zu Deutsch wechseln" },
+    ],
+    de: [
+      { href: "/", label: "FR", aria: "Zu Franzosisch wechseln" },
+      { href: "/en", label: "EN", aria: "Switch to English" },
+      { href: "/es", label: "ES", aria: "Cambiar a espanol" },
+    ],
+  };
+
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
@@ -196,20 +219,16 @@ export default function App() {
               <a href="#categories" className="hover:text-white">Catégories</a>
               <a href="#selection" className="hover:text-white">Sélection</a>
               <a href="#vision" className="hover:text-white">Vision</a>
-              <a
-                href="/en"
-                className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
-                aria-label="Passer en anglais"
-              >
-                EN
-              </a>
-              <a
-                href="/de"
-                className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
-                aria-label="Passer en allemand"
-              >
-                DE
-              </a>
+              {langLinks[locale].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
+                  aria-label={link.aria}
+                >
+                  {link.label}
+                </a>
+              ))}
             </nav>
           </header>
 
