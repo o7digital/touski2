@@ -18,7 +18,7 @@ const heroSlides = [
   },
   {
     eyebrow: "Altitude & sécurité",
-    title: "GPS high mountains et autonomie réelle.",
+    title: "High-altitude GPS and real autonomy.",
     text: "Slide prévu pour photo GPS/alpinisme en conditions extrêmes.",
     accent: "GPS • Sécurité • Autonomie • Altitude",
     image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.png",
@@ -32,7 +32,7 @@ const heroSlides = [
   },
   {
     eyebrow: "Alpinisme & équipement",
-    title: "Vêtements techniques et protection de high mountains.",
+    title: "Technical apparel and high-mountain protection.",
     text: "Slide prévu pour photo vêtements techniques/alpinisme.",
     accent: "Alpinisme • Vêtements • Sécurité",
     image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.png",
@@ -47,7 +47,7 @@ const heroSlides = [
   {
     eyebrow: "Exploration & sécurité",
     title: "Repérage terrain et autonomie en conditions réelles.",
-    text: "Slide prévu pour photo exploration/outdoor safety.",
+    text: "Designed for real exploration and outdoor safety imagery.",
     accent: "Exploration • Mission • Sécurité",
     image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.png",
     fallback:
@@ -124,34 +124,11 @@ const editorialCards = [
 ];
 
 const stats = [
-  { value: "6", label: "Universe stratégiques" },
+  { value: "6", label: "Strategic worlds" },
   { value: "24/7", label: "Esprit sécurité" },
   { value: "100%", label: "Indispensable" },
 ];
 
-const localSeoKeywords = [
-  "touski Quebec Saint Elie de Caxton",
-  "touski canada Quebec Saint Elie de Caxton",
-  "équipement montagne Quebec Saint Elie de Caxton",
-  "équipement trekking Quebec Saint Elie de Caxton",
-  "matériel randonnée Quebec Saint Elie de Caxton",
-  "gps high mountains Quebec Saint Elie de Caxton",
-  "gps alpinisme Quebec Saint Elie de Caxton",
-  "outdoor safety Quebec Saint Elie de Caxton",
-  "drone outdoor safety Quebec Saint Elie de Caxton",
-  "drone surveillance nature Quebec Saint Elie de Caxton",
-  "équipement alpinisme Quebec Saint Elie de Caxton",
-  "vêtements techniques montagne Quebec Saint Elie de Caxton",
-  "accessoires nature Quebec Saint Elie de Caxton",
-  "équipement exploration Quebec Saint Elie de Caxton",
-  "équipement expédition Quebec Saint Elie de Caxton",
-  "orientation montagne Quebec Saint Elie de Caxton",
-  "autonomie outdoor Quebec Saint Elie de Caxton",
-  "survie douce Quebec Saint Elie de Caxton",
-  "essentiels maison Quebec Saint Elie de Caxton",
-  "équipement chalet Quebec Saint Elie de Caxton",
-  "indispensables plein air Quebec Saint Elie de Caxton",
-];
 
 export default function AppEn() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -217,6 +194,13 @@ export default function AppEn() {
               >
                 FR
               </a>
+              <a
+                href="/de"
+                className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
+                aria-label="Switch to German"
+              >
+                DE
+              </a>
             </nav>
           </header>
 
@@ -227,20 +211,20 @@ export default function AppEn() {
                   Everything that truly matters
                 </div>
                 <h1 className="text-4xl font-semibold leading-[0.96] tracking-tight sm:text-5xl md:text-6xl xl:text-[5.1rem]">
-                  TOUSKI equips <span className="text-orange-200">high mountains</span>, le <span className="text-emerald-200">trekking</span> et la <span className="text-sky-200">outdoor safety</span>.
+                  TOUSKI equips <span className="text-orange-200">high mountains</span>, <span className="text-emerald-200">trekking</span>, and <span className="text-sky-200">outdoor safety</span>.
                 </h1>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-white/85 md:text-xl">
-                  Hero clean conçu pour recevoir tes vraies photos fullscreen: trekking, GPS, alpinisme et vêtements techniques.
-                  L'image du slide est le fond principal, avec overlay premium pour garder une lecture parfaite.
+                  This hero is built for your real fullscreen photos: trekking, GPS, mountaineering, and technical apparel.
+                  Each slide image is the main background with a premium overlay to keep text perfectly readable.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <button className="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#0b1713] shadow-2xl shadow-white/20 transition hover:scale-[1.02]">
+                  <a href="#selection" className="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#0b1713] shadow-2xl shadow-white/20 transition hover:scale-[1.02]">
                     See mountain collection
-                  </button>
-                  <button className="rounded-full border border-white/20 bg-black/20 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:bg-white/10">
+                  </a>
+                  <a href="#categories" className="rounded-full border border-white/20 bg-black/20 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:bg-white/10">
                     Explore GPS & mountaineering
-                  </button>
+                  </a>
                 </div>
 
                 <div className="mt-10 grid max-w-2xl gap-3 sm:grid-cols-3">
@@ -270,7 +254,7 @@ export default function AppEn() {
                         className={`h-2.5 rounded-full transition-all ${
                           activeSlide === index ? "w-8 bg-white" : "w-2.5 bg-white/35"
                         }`}
-                        aria-label={`Aller au slide ${index + 1}`}
+                        aria-label={`Go to slide ${index + 1}`}
                       />
                     ))}
                   </div>
@@ -324,10 +308,10 @@ export default function AppEn() {
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-amber-200/75">Catalog architecture</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">Des niches cohérentes, visuellement fortes et premium.</h2>
+            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">Coherent, premium categories with strong visual identity.</h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-white/68">
-              TOUSKI réunit plusieurs mondes sous une seule promesse: l'indispensable bien choisi.
-              Cela élargit la marque sans la diluer et augmente le niveau perçu.
+              TOUSKI brings together multiple worlds under one promise: well-chosen essentials.
+              This expands the brand without diluting it and elevates perceived quality.
             </p>
           </div>
 
@@ -379,9 +363,9 @@ export default function AppEn() {
                 <p className="text-xs uppercase tracking-[0.26em] text-amber-200/80">{item.tag}</p>
                 <h3 className="mt-3 text-2xl font-semibold transition group-hover:translate-x-1">{item.name}</h3>
                 <p className="mt-3 text-sm leading-7 text-white/68">{item.desc}</p>
-                <button className="mt-6 rounded-full border border-white/12 px-4 py-2 text-sm text-white/88 transition hover:bg-white/10">
+                <a href="#categories" className="mt-6 inline-block rounded-full border border-white/12 px-4 py-2 text-sm text-white/88 transition hover:bg-white/10">
                   View collection
-                </button>
+                </a>
               </div>
             </article>
           ))}
@@ -394,12 +378,12 @@ export default function AppEn() {
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-orange-200/80">Brand vision</p>
               <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight md:text-5xl">
-                TOUSKI doit donner envie, inspirer confiance et paraître prêt pour le terrain comme pour la maison.
+                TOUSKI should inspire trust, create desire, and feel ready for both the field and home.
               </h2>
             </div>
             <p className="text-base leading-8 text-white/68">
-              Le ton quitte le rendu discount ou gadget. La marque monte vers un univers plus éditorial,
-              plus haut de gamme, plus outdoor et plus aspirational, tout en gardant l'utilité réelle au centre.
+              The tone moves away from discount or gadget positioning. The brand shifts toward a more editorial,
+              premium, outdoor, and aspirational universe while keeping practical utility at the center.
             </p>
           </div>
         </div>
@@ -409,15 +393,12 @@ export default function AppEn() {
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
           <h2 className="text-2xl font-semibold">TOUSKI in Quebec, Saint Elie de Caxton</h2>
           <p className="mt-4 max-w-4xl text-sm leading-7 text-white/70">
-            TOUSKI propose de l'équipement montagne, du matériel trekking et randonnée, des solutions GPS high mountains,
-            des drones de outdoor safety, de l'équipement alpinisme et des essentiels maison pour Quebec, Saint Elie de Caxton.
+            TOUSKI offers mountain equipment, trekking and hiking gear, high-altitude GPS solutions,
+            outdoor safety drones, mountaineering equipment, and practical home essentials in Quebec, Saint-Elie-de-Caxton.
           </p>
           <p className="mt-4 max-w-4xl text-sm leading-7 text-white/70">
-            La sélection couvre aussi les vêtements techniques montagne, l'orientation, l'autonomie outdoor, l'exploration,
-            l'expédition, la survie douce et l'équipement chalet pour un usage concret sur le terrain.
-          </p>
-          <p className="mt-6 text-xs leading-6 text-white/55">
-            {localSeoKeywords.join(" • ")}
+            The selection also covers technical mountain apparel, orientation, outdoor autonomy, exploration,
+            expedition, soft survival, and cabin equipment for practical use in the field.
           </p>
         </div>
       </footer>
