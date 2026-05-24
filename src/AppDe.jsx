@@ -141,6 +141,7 @@ const localSeoGroups = [
 
 export default function AppDe() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -203,7 +204,30 @@ export default function AppDe() {
                 FR
               </a>
             </nav>
+            <button
+              type="button"
+              className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white md:hidden"
+              onClick={() => setMobileMenuOpen((v) => !v)}
+              aria-label="Menu öffnen"
+            >
+              MENU
+            </button>
           </header>
+          {mobileMenuOpen && (
+            <nav className="mt-3 rounded-2xl border border-white/15 bg-black/40 p-4 backdrop-blur md:hidden">
+              <div className="flex flex-col gap-3 text-sm text-white/85">
+                <a href="#univers" onClick={() => setMobileMenuOpen(false)}>Universum</a>
+                <a href="#categories" onClick={() => setMobileMenuOpen(false)}>Kategorien</a>
+                <a href="#selection" onClick={() => setMobileMenuOpen(false)}>Auswahl</a>
+                <a href="#vision" onClick={() => setMobileMenuOpen(false)}>Vision</a>
+                <div className="mt-1 flex gap-2">
+                  <a href="/" className="rounded-full border border-white/30 px-3 py-1 text-xs">FR</a>
+                  <a href="/en" className="rounded-full border border-white/30 px-3 py-1 text-xs">EN</a>
+                  <a href="/es" className="rounded-full border border-white/30 px-3 py-1 text-xs">ES</a>
+                </div>
+              </div>
+            </nav>
+          )}
 
           <div className="relative flex flex-1 items-start py-12 pt-72 lg:py-20 lg:pt-[26rem]">
             <div className="grid w-full gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
