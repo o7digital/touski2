@@ -1,6 +1,37 @@
 import { useEffect, useState } from "react";
 import touskiLogo from "./assets/touski-logo.jpeg";
 
+const heroSlides = [
+  {
+    image: "/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.png",
+    fallback:
+      "bg-[linear-gradient(180deg,#8ca58f_0%,#5b725f_20%,#24322a_52%,#0c1411_100%)]",
+    mountainA: "bg-[#16221c]",
+    mountainB: "bg-[#0a120f]",
+  },
+  {
+    image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.png",
+    fallback:
+      "bg-[linear-gradient(180deg,#b4bfc8_0%,#738693_20%,#303f48_52%,#0c1318_100%)]",
+    mountainA: "bg-[#17222a]",
+    mountainB: "bg-[#0c141a]",
+  },
+  {
+    image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.png",
+    fallback:
+      "bg-[linear-gradient(180deg,#c5a57a_0%,#886a4d_22%,#3c2f27_52%,#100d0c_100%)]",
+    mountainA: "bg-[#241b16]",
+    mountainB: "bg-[#110d0b]",
+  },
+  {
+    image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.png",
+    fallback:
+      "bg-[linear-gradient(180deg,#b6b9ad_0%,#6a705f_24%,#2d3228_54%,#0f120f_100%)]",
+    mountainA: "bg-[#1a1f18]",
+    mountainB: "bg-[#0d100d]",
+  },
+];
+
 const content = {
   fr: {
     nav: ["Univers", "Categories", "Selection", "Vision"],
@@ -79,16 +110,27 @@ export default function App({ locale = "fr" }) {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => setActiveSlide((prev) => (prev + 1) % 4), 3700);
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 3700);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="min-h-screen bg-[#08110d] text-white selection:bg-emerald-300/30">
       <section className="relative min-h-[100svh] overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,#8ca58f_0%,#5b725f_20%,#24322a_52%,#0c1411_100%)]" />
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.png)" }} />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,10,9,0.08)_0%,rgba(6,12,10,0.30)_50%,rgba(3,6,6,0.52)_100%)]" />
+        {heroSlides.map((item, index) => (
+          <div
+            key={item.image}
+            className={`absolute inset-0 transition-all duration-700 ${index === activeSlide ? "opacity-100" : "opacity-0"}`}
+          >
+            <div className={`absolute inset-0 ${item.fallback}`} />
+            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${item.image})` }} />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,10,9,0.08)_0%,rgba(6,12,10,0.30)_50%,rgba(3,6,6,0.52)_100%)]" />
+            <div className={`absolute inset-x-0 bottom-0 h-[32%] ${item.mountainA} opacity-60 [clip-path:polygon(0_60%,16%_46%,32%_57%,49%_35%,66%_52%,84%_37%,100%_55%,100%_100%,0_100%)]`} />
+            <div className={`absolute inset-x-0 bottom-0 h-[20%] ${item.mountainB} opacity-65 [clip-path:polygon(0_72%,18%_56%,35%_66%,51%_49%,67%_60%,82%_44%,100%_58%,100%_100%,0_100%)]`} />
+          </div>
+        ))}
 
         <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col px-6 py-6 lg:px-10">
           <header className="relative flex items-center justify-between rounded-full border border-white/15 bg-black/25 px-4 py-3 backdrop-blur-xl shadow-xl shadow-black/30">
