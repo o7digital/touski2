@@ -18,7 +18,7 @@ const heroSlides = [
   },
   {
     eyebrow: "Altitude & sécurité",
-    title: "GPS haute montagne et autonomie réelle.",
+    title: "High-altitude GPS and real autonomy.",
     text: "Slide prévu pour photo GPS/alpinisme en conditions extrêmes.",
     accent: "GPS • Sécurité • Autonomie • Altitude",
     image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.png",
@@ -27,12 +27,12 @@ const heroSlides = [
     mountainA: "bg-[#17222a]",
     mountainB: "bg-[#0c141a]",
     glass: "bg-black/25",
-    tag1: "GPS haute montagne",
+    tag1: "GPS Hochgebirge",
     tag2: "Orientation & confiance",
   },
   {
     eyebrow: "Alpinisme & équipement",
-    title: "Vêtements techniques et protection de haute montagne.",
+    title: "Technical apparel and high-mountain protection.",
     text: "Slide prévu pour photo vêtements techniques/alpinisme.",
     accent: "Alpinisme • Vêtements • Sécurité",
     image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.png",
@@ -47,7 +47,7 @@ const heroSlides = [
   {
     eyebrow: "Exploration & sécurité",
     title: "Repérage terrain et autonomie en conditions réelles.",
-    text: "Slide prévu pour photo exploration/sécurité outdoor.",
+    text: "Designed for real exploration and Outdoor-Sicherheit imagery.",
     accent: "Exploration • Mission • Sécurité",
     image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.png",
     fallback:
@@ -66,7 +66,7 @@ const pillars = [
     text: "Équipement utile pour partir plus loin, plus léger, plus sûr.",
   },
   {
-    title: "GPS & haute montagne",
+    title: "GPS & Hochgebirge",
     text: "Solutions de localisation, orientation et sécurité pour terrains exigeants.",
   },
   {
@@ -81,7 +81,7 @@ const pillars = [
 
 const categories = [
   "Trekking",
-  "GPS haute montagne",
+  "GPS Hochgebirge",
   "Drones sécurité",
   "Maison",
   "Randonnée",
@@ -124,13 +124,13 @@ const editorialCards = [
 ];
 
 const stats = [
-  { value: "6", label: "Univers stratégiques" },
+  { value: "6", label: "Strategic worlds" },
   { value: "24/7", label: "Esprit sécurité" },
   { value: "100%", label: "Indispensable" },
 ];
 
 
-export default function App() {
+export default function AppDe() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
@@ -183,23 +183,16 @@ export default function App() {
               </div>
             </div>
             <nav className="hidden items-center gap-8 text-sm text-white/80 md:flex">
-              <a href="#univers" className="hover:text-white">Univers</a>
-              <a href="#categories" className="hover:text-white">Catégories</a>
-              <a href="#selection" className="hover:text-white">Sélection</a>
+              <a href="#univers" className="hover:text-white">Universum</a>
+              <a href="#categories" className="hover:text-white">Kategorien</a>
+              <a href="#selection" className="hover:text-white">Auswahl</a>
               <a href="#vision" className="hover:text-white">Vision</a>
               <a
-                href="/en"
+                href="/"
                 className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
-                aria-label="Passer en anglais"
+                aria-label="Zu Franzosisch wechseln"
               >
-                EN
-              </a>
-              <a
-                href="/de"
-                className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
-                aria-label="Passer en allemand"
-              >
-                DE
+                FR
               </a>
             </nav>
           </header>
@@ -208,22 +201,22 @@ export default function App() {
             <div className="grid w-full gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div className="max-w-4xl">
                 <div className="mb-6 inline-flex rounded-full border border-white/20 bg-black/25 px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/90 backdrop-blur">
-                  Tout ce qui est indispensable
+                  Alles, was wirklich wichtig ist
                 </div>
                 <h1 className="text-4xl font-semibold leading-[0.96] tracking-tight sm:text-5xl md:text-6xl xl:text-[5.1rem]">
-                  TOUSKI équipe la <span className="text-orange-200">haute montagne</span>, le <span className="text-emerald-200">trekking</span> et la <span className="text-sky-200">sécurité outdoor</span>.
+                  TOUSKI stattet <span className="text-orange-200">Hochgebirge</span>, <span className="text-emerald-200">trekking</span>, and <span className="text-sky-200">Outdoor-Sicherheit</span>.
                 </h1>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-white/85 md:text-xl">
-                  Hero clean conçu pour recevoir tes vraies photos fullscreen: trekking, GPS, alpinisme et vêtements techniques.
-                  L'image du slide est le fond principal, avec overlay premium pour garder une lecture parfaite.
+                  This hero is built for your real fullscreen photos: trekking, GPS, mountaineering, and technical apparel.
+                  Each slide image is the main background with a premium overlay to keep text perfectly readable.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a href="#selection" className="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#0b1713] shadow-2xl shadow-white/20 transition hover:scale-[1.02]">
-                    Voir la sélection montagne
+                    Bergkollektion ansehen
                   </a>
                   <a href="#categories" className="rounded-full border border-white/20 bg-black/20 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:bg-white/10">
-                    Explorer GPS & alpinisme
+                    GPS und Alpinismus entdecken
                   </a>
                 </div>
 
@@ -254,7 +247,7 @@ export default function App() {
                         className={`h-2.5 rounded-full transition-all ${
                           activeSlide === index ? "w-8 bg-white" : "w-2.5 bg-white/35"
                         }`}
-                        aria-label={`Aller au slide ${index + 1}`}
+                        aria-label={`Go to slide ${index + 1}`}
                       />
                     ))}
                   </div>
@@ -284,8 +277,8 @@ export default function App() {
       <section id="univers" className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-orange-200/75">Le nouvel univers TOUSKI</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">Une marque d'indispensables, pas une simple boutique.</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-orange-200/75">The new TOUSKI universe</p>
+            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">An essentials brand, not just another store.</h2>
           </div>
           <p className="max-w-2xl text-base leading-7 text-white/68">
             La home raconte une vraie philosophie: ce qui sert vraiment, ce qui protège, ce qui accompagne,
@@ -307,11 +300,11 @@ export default function App() {
       <section id="categories" className="border-y border-white/10 bg-white/[0.03]">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-amber-200/75">Architecture de catalogue</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">Des niches cohérentes, visuellement fortes et premium.</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-amber-200/75">Katalogstruktur</p>
+            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">Coherent, premium categories with strong visual identity.</h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-white/68">
-              TOUSKI réunit plusieurs mondes sous une seule promesse: l'indispensable bien choisi.
-              Cela élargit la marque sans la diluer et augmente le niveau perçu.
+              TOUSKI brings together multiple worlds under one promise: well-chosen essentials.
+              This expands the brand without diluting it and elevates perceived quality.
             </p>
           </div>
 
@@ -319,7 +312,7 @@ export default function App() {
             {[
               ["Maison essentielle", "anti-froid, réparation pratique, entretien, accessoires utiles"],
               ["Trekking & randonnée", "sacs, lampes, filtration, orientation, accessoires durables"],
-              ["GPS & localisation", "suivi, sécurité, haute montagne, expédition, autonomie"],
+              ["GPS & localisation", "suivi, sécurité, Hochgebirge, expédition, autonomie"],
               ["Drones outdoor", "surveillance, exploration, sécurité chalet et zones isolées"],
               ["Alpinisme", "équipement complémentaire, sécurité, outils de progression"],
               ["Nature & survie douce", "objets fiables pour autonomie, protection et confort"],
@@ -336,7 +329,7 @@ export default function App() {
       <section id="selection" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-orange-200/75">Sélection mise en avant</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-orange-200/75">Empfohlene Auswahl</p>
             <h2 className="mt-3 text-3xl font-semibold md:text-5xl">Des produits-phares montrés comme un univers lifestyle.</h2>
           </div>
           <p className="max-w-2xl text-base leading-7 text-white/68">
@@ -364,7 +357,7 @@ export default function App() {
                 <h3 className="mt-3 text-2xl font-semibold transition group-hover:translate-x-1">{item.name}</h3>
                 <p className="mt-3 text-sm leading-7 text-white/68">{item.desc}</p>
                 <a href="#categories" className="mt-6 inline-block rounded-full border border-white/12 px-4 py-2 text-sm text-white/88 transition hover:bg-white/10">
-                  Voir la collection
+                  Kollektion ansehen
                 </a>
               </div>
             </article>
@@ -376,14 +369,14 @@ export default function App() {
         <div className="rounded-[2.2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-8 shadow-2xl shadow-black/20 md:p-12">
           <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-end">
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-orange-200/80">Vision de marque</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-orange-200/80">Markenvision</p>
               <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight md:text-5xl">
-                TOUSKI doit donner envie, inspirer confiance et paraître prêt pour le terrain comme pour la maison.
+                TOUSKI should inspire trust, create desire, and feel ready for both the field and home.
               </h2>
             </div>
             <p className="text-base leading-8 text-white/68">
-              Le ton quitte le rendu discount ou gadget. La marque monte vers un univers plus éditorial,
-              plus haut de gamme, plus outdoor et plus aspirational, tout en gardant l'utilité réelle au centre.
+              The tone moves away from discount or gadget positioning. The brand shifts toward a more editorial,
+              premium, outdoor, and aspirational universe while keeping practical utility at the center.
             </p>
           </div>
         </div>
@@ -391,14 +384,14 @@ export default function App() {
 
       <footer className="border-t border-white/10 bg-[#070f0c]">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
-          <h2 className="text-2xl font-semibold">TOUSKI au Quebec, Saint Elie de Caxton</h2>
+          <h2 className="text-2xl font-semibold">TOUSKI in Quebec, Saint-Elie-de-Caxton</h2>
           <p className="mt-4 max-w-4xl text-sm leading-7 text-white/70">
-            TOUSKI propose de l'équipement montagne, du matériel trekking et randonnée, des solutions GPS haute montagne,
-            des drones de sécurité outdoor, de l'équipement alpinisme et des essentiels maison pour Quebec, Saint Elie de Caxton.
+            TOUSKI offers mountain equipment, trekking and hiking gear, high-altitude GPS solutions,
+            Outdoor-Sicherheit drones, mountaineering equipment, and practical home essentials in Quebec, Saint-Elie-de-Caxton.
           </p>
           <p className="mt-4 max-w-4xl text-sm leading-7 text-white/70">
-            La sélection couvre aussi les vêtements techniques montagne, l'orientation, l'autonomie outdoor, l'exploration,
-            l'expédition, la survie douce et l'équipement chalet pour un usage concret sur le terrain.
+            The selection also covers technical mountain apparel, orientation, outdoor autonomy, exploration,
+            expedition, soft survival, and cabin equipment for practical use in the field.
           </p>
         </div>
       </footer>

@@ -194,6 +194,13 @@ export default function AppEn() {
               >
                 FR
               </a>
+              <a
+                href="/de"
+                className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
+                aria-label="Switch to German"
+              >
+                DE
+              </a>
             </nav>
           </header>
 
