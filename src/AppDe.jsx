@@ -129,6 +129,15 @@ const stats = [
   { value: "100%", label: "Indispensable" },
 ];
 
+const localSeoGroups = [
+  "bergausrustung Quebec Mauricie Quebec Saint Elie de Caxton",
+  "trekking wandern Quebec Mauricie Quebec Saint Elie de Caxton",
+  "hochgebirge gps Quebec Mauricie Quebec Saint Elie de Caxton",
+  "alpinismus outdoor sicherheit Quebec Mauricie Quebec Saint Elie de Caxton",
+  "sicherheitsdrohnen Quebec Mauricie Quebec Saint Elie de Caxton",
+  "haus essentials chalet Quebec Mauricie Quebec Saint Elie de Caxton",
+];
+
 
 export default function AppDe() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -392,6 +401,9 @@ export default function AppDe() {
           <p className="mt-4 max-w-4xl text-sm leading-7 text-white/70">
             The selection also covers technical mountain apparel, orientation, outdoor autonomy, exploration,
             expedition, soft survival, and cabin equipment for practical use in the field.
+          </p>
+          <p className="mt-4 max-w-4xl text-xs leading-7 text-white/60">
+            {localSeoGroups.join(" • ")}
           </p>
         </div>
       </footer>

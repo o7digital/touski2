@@ -129,6 +129,15 @@ const stats = [
   { value: "100%", label: "Indispensable" },
 ];
 
+const localSeoGroups = [
+  "equipement montagne Quebec Mauricie Quebec Saint Elie de Caxton",
+  "trekking randonnee Quebec Mauricie Quebec Saint Elie de Caxton",
+  "gps haute montagne Quebec Mauricie Quebec Saint Elie de Caxton",
+  "alpinisme securite outdoor Quebec Mauricie Quebec Saint Elie de Caxton",
+  "drones de securite Quebec Mauricie Quebec Saint Elie de Caxton",
+  "essentiels maison chalet Quebec Mauricie Quebec Saint Elie de Caxton",
+];
+
 
 export default function App() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -399,6 +408,9 @@ export default function App() {
           <p className="mt-4 max-w-4xl text-sm leading-7 text-white/70">
             La sélection couvre aussi les vêtements techniques montagne, l'orientation, l'autonomie outdoor, l'exploration,
             l'expédition, la survie douce et l'équipement chalet pour un usage concret sur le terrain.
+          </p>
+          <p className="mt-4 max-w-4xl text-xs leading-7 text-white/60">
+            {localSeoGroups.join(" • ")}
           </p>
         </div>
       </footer>

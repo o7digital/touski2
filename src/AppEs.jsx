@@ -118,6 +118,15 @@ const stats = [
   { value: "100%", label: "Esencial" },
 ];
 
+const localSeoGroups = [
+  "equipamiento de montana Quebec Mauricie Quebec Saint Elie de Caxton",
+  "trekking senderismo Quebec Mauricie Quebec Saint Elie de Caxton",
+  "gps alta montana Quebec Mauricie Quebec Saint Elie de Caxton",
+  "alpinismo seguridad outdoor Quebec Mauricie Quebec Saint Elie de Caxton",
+  "drones de seguridad Quebec Mauricie Quebec Saint Elie de Caxton",
+  "esenciales hogar cabana Quebec Mauricie Quebec Saint Elie de Caxton",
+];
+
 export default function AppEs() {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -375,6 +384,9 @@ export default function AppEs() {
           <p className="mt-4 max-w-4xl text-sm leading-7 text-white/70">
             La seleccion tambien cubre ropa tecnica de montana, orientacion, autonomia outdoor, exploracion,
             expedicion, supervivencia suave y equipamiento para cabana con uso real en terreno.
+          </p>
+          <p className="mt-4 max-w-4xl text-xs leading-7 text-white/60">
+            {localSeoGroups.join(" • ")}
           </p>
         </div>
       </footer>
