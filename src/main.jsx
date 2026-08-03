@@ -7,6 +7,7 @@ import AppEs from './AppEs.jsx'
 import AppDe from './AppDe.jsx'
 import Contact from './Contact.jsx'
 import SeoLanding from './SeoLanding.jsx'
+import OliviaChat from './OliviaChat.jsx'
 import { getSeoLanding } from './seoPages.js'
 
 const seoLanding = getSeoLanding(window.location.pathname)
@@ -92,5 +93,6 @@ ensureLink('alternate', `${siteUrl}/`, 'x-default')
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {seoLanding ? <SeoLanding page={seoLanding} /> : isContact ? <Contact /> : isGerman ? <AppDe /> : isSpanish ? <AppEs /> : isEnglish ? <AppEn /> : <App />}
+    <OliviaChat />
   </StrictMode>,
 )
