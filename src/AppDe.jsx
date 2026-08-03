@@ -7,7 +7,7 @@ const heroSlides = [
     title: "Terrain, altitude et liberté de mouvement.",
     text: "Slide prévu pour photo trekking/randonnée en plein écran.",
     accent: "Trekking • Randonnée • Nature",
-    image: "/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.png",
+    image: "/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.webp",
     fallback:
       "bg-[linear-gradient(180deg,#8ca58f_0%,#5b725f_20%,#24322a_52%,#0c1411_100%)]",
     mountainA: "bg-[#16221c]",
@@ -21,7 +21,7 @@ const heroSlides = [
     title: "High-altitude GPS and real autonomy.",
     text: "Slide prévu pour photo GPS/alpinisme en conditions extrêmes.",
     accent: "GPS • Sécurité • Autonomie • Altitude",
-    image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.png",
+    image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.webp",
     fallback:
       "bg-[linear-gradient(180deg,#b4bfc8_0%,#738693_20%,#303f48_52%,#0c1318_100%)]",
     mountainA: "bg-[#17222a]",
@@ -35,7 +35,7 @@ const heroSlides = [
     title: "Technical apparel and high-mountain protection.",
     text: "Slide prévu pour photo vêtements techniques/alpinisme.",
     accent: "Alpinisme • Vêtements • Sécurité",
-    image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.png",
+    image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.webp",
     fallback:
       "bg-[linear-gradient(180deg,#c5a57a_0%,#886a4d_22%,#3c2f27_52%,#100d0c_100%)]",
     mountainA: "bg-[#241b16]",
@@ -49,7 +49,7 @@ const heroSlides = [
     title: "Repérage terrain et autonomie en conditions réelles.",
     text: "Designed for real exploration and Outdoor-Sicherheit imagery.",
     accent: "Exploration • Mission • Sécurité",
-    image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.png",
+    image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.webp",
     fallback:
       "bg-[linear-gradient(180deg,#b6b9ad_0%,#6a705f_24%,#2d3228_54%,#0f120f_100%)]",
     mountainA: "bg-[#1a1f18]",
@@ -77,17 +77,6 @@ const pillars = [
     title: "Maison essentielle",
     text: "Les indispensables solides et intelligents pour la vie quotidienne.",
   },
-];
-
-const categories = [
-  "Trekking",
-  "GPS Hochgebirge",
-  "Drones sécurité",
-  "Maison",
-  "Randonnée",
-  "Alpinisme",
-  "Survie douce",
-  "Accessoires nature",
 ];
 
 const featured = [
@@ -130,12 +119,19 @@ const stats = [
 ];
 
 const localSeoGroups = [
-  "bergausrustung Quebec Mauricie Quebec Saint Elie de Caxton",
-  "trekking wandern Quebec Mauricie Quebec Saint Elie de Caxton",
-  "hochgebirge gps Quebec Mauricie Quebec Saint Elie de Caxton",
-  "alpinismus outdoor sicherheit Quebec Mauricie Quebec Saint Elie de Caxton",
-  "sicherheitsdrohnen Quebec Mauricie Quebec Saint Elie de Caxton",
-  "haus essentials chalet Quebec Mauricie Quebec Saint Elie de Caxton",
+  "bergausrustung Quebec",
+  "outdoor ausrustung Quebec",
+  "trekking ausrustung Kanada",
+  "wanderausrustung Mauricie",
+  "hochgebirge GPS",
+  "wander GPS Quebec",
+  "outdoor sicherheit Quebec",
+  "sicherheitsdrohnen fur chalet",
+  "alpinismus ausrustung",
+  "technische bergbekleidung",
+  "chalet essentials Quebec",
+  "haus essentials Kanada",
+  "outdoor shop Saint Elie de Caxton",
 ];
 
 
@@ -196,6 +192,7 @@ export default function AppDe() {
               <a href="#categories" className="hover:text-white">Kategorien</a>
               <a href="#selection" className="hover:text-white">Auswahl</a>
               <a href="#vision" className="hover:text-white">Vision</a>
+              <a href="/contact" className="hover:text-white">Kontakt</a>
               <a
                 href="/"
                 className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
@@ -220,6 +217,7 @@ export default function AppDe() {
                 <a href="#categories" onClick={() => setMobileMenuOpen(false)}>Kategorien</a>
                 <a href="#selection" onClick={() => setMobileMenuOpen(false)}>Auswahl</a>
                 <a href="#vision" onClick={() => setMobileMenuOpen(false)}>Vision</a>
+                <a href="/contact" onClick={() => setMobileMenuOpen(false)}>Kontakt</a>
                 <div className="mt-1 flex gap-2">
                   <a href="/" className="rounded-full border border-white/30 px-3 py-1 text-xs">FR</a>
                   <a href="/en" className="rounded-full border border-white/30 px-3 py-1 text-xs">EN</a>
@@ -428,7 +426,16 @@ export default function AppDe() {
           <p className="mt-4 max-w-4xl text-xs leading-7 text-white/60">
             {localSeoGroups.join(" • ")}
           </p>
+          <div className="mt-10 grid gap-8 border-t border-white/10 pt-10 md:grid-cols-2 lg:grid-cols-4">
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Kontakt</h3><p className="mt-5 text-sm leading-7 text-white/65">TOUSKI<br />1030 Avenue Muguette<br />Saint-Elie-de-Caxton, QC G0X 2N0, Kanada</p><a className="mt-3 block text-sm text-white/80 hover:text-white" href="mailto:contact@touski.online">contact@touski.online</a><a className="mt-2 block text-sm text-white/70 hover:text-white" href="tel:+18197010378">+1 819-701-0378</a></div>
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Kundenservice</h3><p className="mt-5 text-sm leading-7 text-white/65">Kundenservice rund um die Uhr. Standardversand in Kanada innerhalb von 3 bis 7 Werktagen.</p></div>
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Versand & Ruckgabe</h3><p className="mt-5 text-sm leading-7 text-white/65">Kostenloser Versand ab 140 CAD. Bestellungen unter 140 CAD werden je nach Provinz automatisch berechnet. Bestellungen werden Montag bis Freitag innerhalb von 24 bis 48 Stunden vorbereitet. Ruckgaben innerhalb von 30 Tagen fur unbenutzte Produkte im Originalzustand.</p></div>
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Rechtliches</h3><p className="mt-5 text-sm leading-7 text-white/65">Hosting: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Zahlungen in CAD per Kreditkarte, Visa, Mastercard, American Express und PayPal. Letzte Aktualisierung: November 2025.</p></div>
+          </div>
         </div>
+        <p className="mx-auto max-w-7xl border-t border-white/10 px-6 py-7 text-center text-[11px] leading-7 text-white/35 lg:px-10">
+          {localSeoGroups.join(" · ")}
+        </p>
       </footer>
     </div>
   );

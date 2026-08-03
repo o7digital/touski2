@@ -1,1 +1,16 @@
-{"projectId":"prj_IO69oNxe0m6LpJ0iC9CslopGmLlt","orgId":"team_us0QXK8b92R7QUjYXLrWUHGn","projectName":"touski2"}
+{
+  "projectId": "prj_IO69oNxe0m6LpJ0iC9CslopGmLlt",
+  "orgId": "team_us0QXK8b92R7QUjYXLrWUHGn",
+  "projectName": "touski2",
+  "settings": {
+    "createdAt": 1776918551094,
+    "framework": "vite",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "24.x"
+  }
+}

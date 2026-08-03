@@ -7,7 +7,7 @@ const heroSlides = [
     title: "Terreno, altitud y libertad de movimiento.",
     text: "Diseñado para fotos reales de trekking y senderismo en pantalla completa.",
     accent: "Trekking • Senderismo • Naturaleza",
-    image: "/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.png",
+    image: "/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.webp",
     fallback:
       "bg-[linear-gradient(180deg,#8ca58f_0%,#5b725f_20%,#24322a_52%,#0c1411_100%)]",
     mountainA: "bg-[#16221c]",
@@ -21,7 +21,7 @@ const heroSlides = [
     title: "GPS de alta montana y autonomia real.",
     text: "Pensado para imagenes de GPS y alpinismo en condiciones exigentes.",
     accent: "GPS • Seguridad • Autonomia • Altitud",
-    image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.png",
+    image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.webp",
     fallback:
       "bg-[linear-gradient(180deg,#b4bfc8_0%,#738693_20%,#303f48_52%,#0c1318_100%)]",
     mountainA: "bg-[#17222a]",
@@ -35,7 +35,7 @@ const heroSlides = [
     title: "Ropa tecnica y proteccion para alta montana.",
     text: "Preparado para fotografia de alpinismo y equipamiento tecnico.",
     accent: "Alpinismo • Ropa tecnica • Seguridad",
-    image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.png",
+    image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.webp",
     fallback:
       "bg-[linear-gradient(180deg,#c5a57a_0%,#886a4d_22%,#3c2f27_52%,#100d0c_100%)]",
     mountainA: "bg-[#241b16]",
@@ -49,7 +49,7 @@ const heroSlides = [
     title: "Reconocimiento de terreno y autonomia en condiciones reales.",
     text: "Ideal para visuales de exploracion y seguridad outdoor.",
     accent: "Exploracion • Mision • Seguridad",
-    image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.png",
+    image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.webp",
     fallback:
       "bg-[linear-gradient(180deg,#b6b9ad_0%,#6a705f_24%,#2d3228_54%,#0f120f_100%)]",
     mountainA: "bg-[#1a1f18]",
@@ -119,12 +119,19 @@ const stats = [
 ];
 
 const localSeoGroups = [
-  "equipamiento de montana Quebec Mauricie Quebec Saint Elie de Caxton",
-  "trekking senderismo Quebec Mauricie Quebec Saint Elie de Caxton",
-  "gps alta montana Quebec Mauricie Quebec Saint Elie de Caxton",
-  "alpinismo seguridad outdoor Quebec Mauricie Quebec Saint Elie de Caxton",
-  "drones de seguridad Quebec Mauricie Quebec Saint Elie de Caxton",
-  "esenciales hogar cabana Quebec Mauricie Quebec Saint Elie de Caxton",
+  "equipamiento de montana Quebec",
+  "equipo outdoor Quebec",
+  "material de trekking Canada",
+  "senderismo Mauricie",
+  "GPS de alta montana",
+  "GPS para senderismo Quebec",
+  "seguridad outdoor Quebec",
+  "drones de seguridad para cabana",
+  "equipamiento de alpinismo",
+  "ropa tecnica de montana",
+  "esenciales para cabana Quebec",
+  "esenciales para el hogar Canada",
+  "tienda outdoor Saint Elie de Caxton",
 ];
 
 export default function AppEs() {
@@ -184,6 +191,7 @@ export default function AppEs() {
               <a href="#categories" className="hover:text-white">Categorias</a>
               <a href="#selection" className="hover:text-white">Seleccion</a>
               <a href="#vision" className="hover:text-white">Vision</a>
+              <a href="/contact" className="hover:text-white">Contacto</a>
               <a href="/" className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10" aria-label="Cambiar a frances">FR</a>
               <a href="/en" className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10" aria-label="Switch to English">EN</a>
             </nav>
@@ -203,6 +211,7 @@ export default function AppEs() {
                 <a href="#categories" onClick={() => setMobileMenuOpen(false)}>Categorias</a>
                 <a href="#selection" onClick={() => setMobileMenuOpen(false)}>Seleccion</a>
                 <a href="#vision" onClick={() => setMobileMenuOpen(false)}>Vision</a>
+                <a href="/contact" onClick={() => setMobileMenuOpen(false)}>Contacto</a>
                 <div className="mt-1 flex gap-2">
                   <a href="/" className="rounded-full border border-white/30 px-3 py-1 text-xs">FR</a>
                   <a href="/en" className="rounded-full border border-white/30 px-3 py-1 text-xs">EN</a>
@@ -411,7 +420,16 @@ export default function AppEs() {
           <p className="mt-4 max-w-4xl text-xs leading-7 text-white/60">
             {localSeoGroups.join(" • ")}
           </p>
+          <div className="mt-10 grid gap-8 border-t border-white/10 pt-10 md:grid-cols-2 lg:grid-cols-4">
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Contacto</h3><p className="mt-5 text-sm leading-7 text-white/65">TOUSKI<br />1030 Avenue Muguette<br />Saint-Elie-de-Caxton, QC G0X 2N0, Canada</p><a className="mt-3 block text-sm text-white/80 hover:text-white" href="mailto:contact@touski.online">contact@touski.online</a><a className="mt-2 block text-sm text-white/70 hover:text-white" href="tel:+18197010378">+1 819-701-0378</a></div>
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Servicio al cliente</h3><p className="mt-5 text-sm leading-7 text-white/65">Soporte disponible 24/7. Envio estandar en Canada de 3 a 7 dias habiles.</p></div>
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Envios y devoluciones</h3><p className="mt-5 text-sm leading-7 text-white/65">Envio gratis desde $140 CAD. Los pedidos menores de $140 CAD se calculan automaticamente segun la provincia. Los pedidos se preparan de lunes a viernes en 24 a 48 h. Devoluciones aceptadas durante 30 dias para productos no usados en estado original.</p></div>
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Legal</h3><p className="mt-5 text-sm leading-7 text-white/65">Alojamiento: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Pagos aceptados en CAD con tarjeta de credito, Visa, Mastercard, American Express y PayPal. Ultima actualizacion: noviembre 2025.</p></div>
+          </div>
         </div>
+        <p className="mx-auto max-w-7xl border-t border-white/10 px-6 py-7 text-center text-[11px] leading-7 text-white/35 lg:px-10">
+          {localSeoGroups.join(" · ")}
+        </p>
       </footer>
     </div>
   );

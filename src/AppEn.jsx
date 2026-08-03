@@ -7,7 +7,7 @@ const heroSlides = [
     title: "Terrain, altitude et liberté de mouvement.",
     text: "Slide prévu pour photo trekking/randonnée en plein écran.",
     accent: "Trekking • Randonnée • Nature",
-    image: "/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.png",
+    image: "/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.webp",
     fallback:
       "bg-[linear-gradient(180deg,#8ca58f_0%,#5b725f_20%,#24322a_52%,#0c1411_100%)]",
     mountainA: "bg-[#16221c]",
@@ -21,7 +21,7 @@ const heroSlides = [
     title: "High-altitude GPS and real autonomy.",
     text: "Slide prévu pour photo GPS/alpinisme en conditions extrêmes.",
     accent: "GPS • Sécurité • Autonomie • Altitude",
-    image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.png",
+    image: "/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.webp",
     fallback:
       "bg-[linear-gradient(180deg,#b4bfc8_0%,#738693_20%,#303f48_52%,#0c1318_100%)]",
     mountainA: "bg-[#17222a]",
@@ -35,7 +35,7 @@ const heroSlides = [
     title: "Technical apparel and high-mountain protection.",
     text: "Slide prévu pour photo vêtements techniques/alpinisme.",
     accent: "Alpinisme • Vêtements • Sécurité",
-    image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.png",
+    image: "/slider/Gemini_Generated_Image_846e9h846e9h846e.webp",
     fallback:
       "bg-[linear-gradient(180deg,#c5a57a_0%,#886a4d_22%,#3c2f27_52%,#100d0c_100%)]",
     mountainA: "bg-[#241b16]",
@@ -49,7 +49,7 @@ const heroSlides = [
     title: "Repérage terrain et autonomie en conditions réelles.",
     text: "Designed for real exploration and outdoor safety imagery.",
     accent: "Exploration • Mission • Sécurité",
-    image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.png",
+    image: "/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.webp",
     fallback:
       "bg-[linear-gradient(180deg,#b6b9ad_0%,#6a705f_24%,#2d3228_54%,#0f120f_100%)]",
     mountainA: "bg-[#1a1f18]",
@@ -77,17 +77,6 @@ const pillars = [
     title: "Maison essentielle",
     text: "Les indispensables solides et intelligents pour la vie quotidienne.",
   },
-];
-
-const categories = [
-  "Trekking",
-  "GPS high mountains",
-  "Drones sécurité",
-  "Maison",
-  "Randonnée",
-  "Alpinisme",
-  "Survie douce",
-  "Accessoires nature",
 ];
 
 const featured = [
@@ -130,12 +119,19 @@ const stats = [
 ];
 
 const localSeoGroups = [
-  "mountain equipment Quebec Mauricie Quebec Saint Elie de Caxton",
-  "trekking hiking Quebec Mauricie Quebec Saint Elie de Caxton",
-  "high altitude gps Quebec Mauricie Quebec Saint Elie de Caxton",
-  "mountaineering outdoor safety Quebec Mauricie Quebec Saint Elie de Caxton",
-  "security drones Quebec Mauricie Quebec Saint Elie de Caxton",
-  "home essentials cabin Quebec Mauricie Quebec Saint Elie de Caxton",
+  "mountain equipment Quebec",
+  "outdoor gear Quebec",
+  "trekking gear Canada",
+  "hiking gear Mauricie",
+  "high altitude GPS",
+  "hiking GPS Quebec",
+  "outdoor safety Quebec",
+  "security drones for cabins",
+  "mountaineering equipment",
+  "technical mountain apparel",
+  "cabin essentials Quebec",
+  "home essentials Canada",
+  "Saint Elie de Caxton outdoor store",
 ];
 
 
@@ -196,6 +192,7 @@ export default function AppEn() {
               <a href="#categories" className="hover:text-white">Categories</a>
               <a href="#selection" className="hover:text-white">Selection</a>
               <a href="#vision" className="hover:text-white">Vision</a>
+              <a href="/contact" className="hover:text-white">Contact</a>
               <a
                 href="/"
                 className="rounded-full border border-white/30 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white transition hover:bg-white/10"
@@ -227,6 +224,7 @@ export default function AppEn() {
                 <a href="#categories" onClick={() => setMobileMenuOpen(false)}>Categories</a>
                 <a href="#selection" onClick={() => setMobileMenuOpen(false)}>Selection</a>
                 <a href="#vision" onClick={() => setMobileMenuOpen(false)}>Vision</a>
+                <a href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
                 <div className="mt-1 flex gap-2">
                   <a href="/" className="rounded-full border border-white/30 px-3 py-1 text-xs">FR</a>
                   <a href="/es" className="rounded-full border border-white/30 px-3 py-1 text-xs">ES</a>
@@ -435,7 +433,16 @@ export default function AppEn() {
           <p className="mt-4 max-w-4xl text-xs leading-7 text-white/60">
             {localSeoGroups.join(" • ")}
           </p>
+          <div className="mt-10 grid gap-8 border-t border-white/10 pt-10 md:grid-cols-2 lg:grid-cols-4">
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Contact</h3><p className="mt-5 text-sm leading-7 text-white/65">TOUSKI<br />1030 Avenue Muguette<br />Saint-Elie-de-Caxton, QC G0X 2N0, Canada</p><a className="mt-3 block text-sm text-white/80 hover:text-white" href="mailto:contact@touski.online">contact@touski.online</a><a className="mt-2 block text-sm text-white/70 hover:text-white" href="tel:+18197010378">+1 819-701-0378</a></div>
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Customer care</h3><p className="mt-5 text-sm leading-7 text-white/65">Customer support available 24/7. Standard shipping across Canada takes 3 to 7 business days.</p></div>
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Shipping & returns</h3><p className="mt-5 text-sm leading-7 text-white/65">Free shipping from $140 CAD. Orders under $140 CAD are calculated by province at checkout. Orders are prepared Monday to Friday within 24 to 48 hours. Returns accepted within 30 days for unused products in original condition.</p></div>
+            <div><h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/45">Legal</h3><p className="mt-5 text-sm leading-7 text-white/65">Host: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Payments accepted in CAD by credit card, Visa, Mastercard, American Express and PayPal. Last update: November 2025.</p></div>
+          </div>
         </div>
+        <p className="mx-auto max-w-7xl border-t border-white/10 px-6 py-7 text-center text-[11px] leading-7 text-white/35 lg:px-10">
+          {localSeoGroups.join(" · ")}
+        </p>
       </footer>
     </div>
   );
