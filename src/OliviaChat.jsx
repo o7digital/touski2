@@ -224,7 +224,7 @@ export default function OliviaChat() {
               <input required placeholder={t.lastName} value={lead.lastName} onChange={(event) => setLead({ ...lead, lastName: event.target.value })} className="rounded-xl border border-white/10 bg-white px-3 py-2 text-sm text-[#172019]" />
               <input required type="email" placeholder={t.email} value={lead.email} onChange={(event) => setLead({ ...lead, email: event.target.value })} className="rounded-xl border border-white/10 bg-white px-3 py-2 text-sm text-[#172019]" />
               <input required type="tel" placeholder={t.phone} value={lead.phone} onChange={(event) => setLead({ ...lead, phone: event.target.value })} className="rounded-xl border border-white/10 bg-white px-3 py-2 text-sm text-[#172019]" />
-              <input required placeholder={t.need} value={lead.need} onChange={(event) => setLead({ ...lead, need: event.target.value })} className="col-span-2 rounded-xl border border-white/10 bg-white px-3 py-2 text-sm text-[#172019]" />
+              <textarea required rows={2} placeholder={t.need} value={lead.need} onChange={(event) => setLead({ ...lead, need: event.target.value })} className="col-span-2 min-h-[74px] resize-y rounded-xl border border-white/10 bg-white px-3 py-2 text-sm text-[#172019]" />
               <button disabled={loading} className="col-span-2 rounded-xl bg-orange-300 px-4 py-3 text-sm font-bold text-[#172019] disabled:opacity-60">{t.sendDetails}</button>
             </form>
           )}
