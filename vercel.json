@@ -9,6 +9,18 @@
       "destination": "/contact/index.html"
     },
     {
+      "source": "/equipement-montagne-quebec-mont-iberville",
+      "destination": "/equipement-montagne-quebec-mont-iberville/index.html"
+    },
+    {
+      "source": "/gps-haute-montagne-quebec-mont-iberville",
+      "destination": "/gps-haute-montagne-quebec-mont-iberville/index.html"
+    },
+    {
+      "source": "/trekking-randonnee-quebec-mont-iberville",
+      "destination": "/trekking-randonnee-quebec-mont-iberville/index.html"
+    },
+    {
       "source": "/es",
       "destination": "/es/index.html"
     },

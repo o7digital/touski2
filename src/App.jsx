@@ -554,6 +554,11 @@ export default function App() {
             <p className="mt-4 max-w-5xl text-sm leading-7 text-white/62">
               Recherches associées: {localSeoGroups.join(" • ")}.
             </p>
+            <nav className="mt-5 flex flex-wrap gap-3 text-sm">
+              <a className="rounded-full border border-white/10 px-4 py-2 text-white/70 hover:bg-white/10 hover:text-white" href="/equipement-montagne-quebec-mont-iberville">Équipement montagne Québec Mont d'Iberville</a>
+              <a className="rounded-full border border-white/10 px-4 py-2 text-white/70 hover:bg-white/10 hover:text-white" href="/gps-haute-montagne-quebec-mont-iberville">GPS haute montagne Québec Mont d'Iberville</a>
+              <a className="rounded-full border border-white/10 px-4 py-2 text-white/70 hover:bg-white/10 hover:text-white" href="/trekking-randonnee-quebec-mont-iberville">Trekking randonnée Québec Mont d'Iberville</a>
+            </nav>
           </div>
         </div>
         <div className="border-t border-white/10">

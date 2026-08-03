@@ -6,7 +6,10 @@ import AppEn from './AppEn.jsx'
 import AppEs from './AppEs.jsx'
 import AppDe from './AppDe.jsx'
 import Contact from './Contact.jsx'
+import SeoLanding from './SeoLanding.jsx'
+import { getSeoLanding } from './seoPages.js'
 
+const seoLanding = getSeoLanding(window.location.pathname)
 const isContact = window.location.pathname === '/contact' || window.location.pathname.startsWith('/contact/')
 const isEnglish = window.location.pathname === '/en' || window.location.pathname.startsWith('/en/')
 const isSpanish = window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')
@@ -14,9 +17,15 @@ const isGerman = window.location.pathname === '/de' || window.location.pathname.
 
 const siteUrl = 'https://touski.online'
 const locale = isGerman ? 'de-CA' : isSpanish ? 'es-CA' : isEnglish ? 'en-CA' : 'fr-CA'
-const canonicalPath = isContact ? '/contact' : isGerman ? '/de' : isSpanish ? '/es' : isEnglish ? '/en' : '/'
+const canonicalPath = seoLanding ? window.location.pathname : isContact ? '/contact' : isGerman ? '/de' : isSpanish ? '/es' : isEnglish ? '/en' : '/'
 const canonicalUrl = `${siteUrl}${canonicalPath}`
-const seo = isContact
+const seo = seoLanding
+  ? {
+      title: `${seoLanding.title} – TOUSKI`,
+      description: seoLanding.intro,
+      locale: 'fr_CA',
+    }
+  : isContact
   ? {
       title: 'Contactez TOUSKI – Service client au Québec et au Canada',
       description: "Contactez TOUSKI Canada: adresse à Saint-Élie-de-Caxton, email, téléphone, horaires, service client, livraison, retours et équipement Mont d'Iberville.",
@@ -82,6 +91,6 @@ ensureLink('alternate', `${siteUrl}/`, 'x-default')
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {isContact ? <Contact /> : isGerman ? <AppDe /> : isSpanish ? <AppEs /> : isEnglish ? <AppEn /> : <App />}
+    {seoLanding ? <SeoLanding page={seoLanding} /> : isContact ? <Contact /> : isGerman ? <AppDe /> : isSpanish ? <AppEs /> : isEnglish ? <AppEn /> : <App />}
   </StrictMode>,
 )
