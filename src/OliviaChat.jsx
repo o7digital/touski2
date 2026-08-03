@@ -15,6 +15,7 @@ const copy = {
     lastName: "Nom",
     email: "Email",
     phone: "Téléphone",
+    need: "Besoin",
     sendDetails: "Envoyer",
     detailsSent: "Merci. Vos coordonnées sont enregistrées. Posez-moi votre question.",
     placeholder: "Écrivez votre question...",
@@ -30,6 +31,7 @@ const copy = {
     lastName: "Last name",
     email: "Email",
     phone: "Phone",
+    need: "Need",
     sendDetails: "Send",
     detailsSent: "Thanks. Your details are saved. Ask me your question.",
     placeholder: "Write your question...",
@@ -45,6 +47,7 @@ const copy = {
     lastName: "Apellido",
     email: "Email",
     phone: "Teléfono",
+    need: "Necesidad",
     sendDetails: "Enviar",
     detailsSent: "Gracias. Tus datos quedaron guardados. Hazme tu pregunta.",
     placeholder: "Escribe tu pregunta...",
@@ -60,6 +63,7 @@ const copy = {
     lastName: "Nachname",
     email: "E-Mail",
     phone: "Telefon",
+    need: "Bedarf",
     sendDetails: "Senden",
     detailsSent: "Danke. Ihre Daten wurden gespeichert. Stellen Sie mir Ihre Frage.",
     placeholder: "Ihre Frage...",
@@ -93,7 +97,7 @@ export default function OliviaChat() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [leadSent, setLeadSent] = useState(false);
-  const [lead, setLead] = useState({ firstName: "", lastName: "", email: "", phone: "" });
+  const [lead, setLead] = useState({ firstName: "", lastName: "", email: "", phone: "", need: "" });
   const [messages, setMessages] = useState([{ role: "assistant", content: t.welcome }]);
   const inputRef = useRef(null);
 
@@ -135,11 +139,11 @@ export default function OliviaChat() {
 
   const submitLead = async (event) => {
     event.preventDefault();
-    if (loading || !lead.firstName || !lead.lastName || !lead.email || !lead.phone) return;
+    if (loading || !lead.firstName || !lead.lastName || !lead.email || !lead.phone || !lead.need) return;
     setLoading(true);
     try {
       await storeChannelMessage(
-        `Lead: ${lead.firstName} ${lead.lastName} · ${lead.email} · ${lead.phone}`,
+        `Lead: ${lead.firstName} ${lead.lastName} · ${lead.email} · ${lead.phone} · ${t.need}: ${lead.need}`,
         { type: "lead", lead, transcript },
       );
       setLeadSent(true);
@@ -220,6 +224,7 @@ export default function OliviaChat() {
               <input required placeholder={t.lastName} value={lead.lastName} onChange={(event) => setLead({ ...lead, lastName: event.target.value })} className="rounded-xl border border-white/10 bg-white px-3 py-2 text-sm text-[#172019]" />
               <input required type="email" placeholder={t.email} value={lead.email} onChange={(event) => setLead({ ...lead, email: event.target.value })} className="rounded-xl border border-white/10 bg-white px-3 py-2 text-sm text-[#172019]" />
               <input required type="tel" placeholder={t.phone} value={lead.phone} onChange={(event) => setLead({ ...lead, phone: event.target.value })} className="rounded-xl border border-white/10 bg-white px-3 py-2 text-sm text-[#172019]" />
+              <input required placeholder={t.need} value={lead.need} onChange={(event) => setLead({ ...lead, need: event.target.value })} className="col-span-2 rounded-xl border border-white/10 bg-white px-3 py-2 text-sm text-[#172019]" />
               <button disabled={loading} className="col-span-2 rounded-xl bg-orange-300 px-4 py-3 text-sm font-bold text-[#172019] disabled:opacity-60">{t.sendDetails}</button>
             </form>
           )}
