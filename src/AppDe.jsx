@@ -119,19 +119,19 @@ const stats = [
 ];
 
 const localSeoGroups = [
-  "bergausrustung Quebec",
-  "outdoor ausrustung Quebec",
-  "trekking ausrustung Kanada",
-  "wanderausrustung Mauricie",
-  "hochgebirge GPS",
-  "wander GPS Quebec",
-  "outdoor sicherheit Quebec",
-  "sicherheitsdrohnen fur chalet",
-  "alpinismus ausrustung",
-  "technische bergbekleidung",
-  "chalet essentials Quebec",
-  "haus essentials Kanada",
-  "outdoor shop Saint Elie de Caxton",
+  "bergausrustung Quebec Mount Iberville",
+  "outdoor ausrustung Quebec Mount Iberville",
+  "trekking ausrustung Quebec Mount Iberville",
+  "wanderausrustung Quebec Mount Iberville",
+  "hochgebirge GPS Quebec Mount Iberville",
+  "wander GPS Quebec Mount Iberville",
+  "outdoor sicherheit Quebec Mount Iberville",
+  "sicherheitsdrohnen fur chalet Quebec Mount Iberville",
+  "alpinismus ausrustung Quebec Mount Iberville",
+  "technische bergbekleidung Quebec Mount Iberville",
+  "chalet essentials Quebec Mount Iberville",
+  "haus essentials Quebec Mount Iberville",
+  "outdoor shop Saint Elie de Caxton Quebec Mount Iberville",
 ];
 
 

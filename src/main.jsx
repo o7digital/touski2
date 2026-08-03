@@ -19,30 +19,30 @@ const canonicalUrl = `${siteUrl}${canonicalPath}`
 const seo = isContact
   ? {
       title: 'Contactez TOUSKI – Service client au Québec et au Canada',
-      description: 'Contactez TOUSKI Canada: adresse à Saint-Élie-de-Caxton, email, téléphone, horaires, service client, livraison et retours.',
+      description: "Contactez TOUSKI Canada: adresse à Saint-Élie-de-Caxton, email, téléphone, horaires, service client, livraison, retours et équipement Mont d'Iberville.",
       locale: 'fr_CA',
     }
   : isGerman
   ? {
       title: 'TOUSKI – Bergausrüstung, Trekking, GPS und Outdoor-Sicherheit',
-      description: 'TOUSKI bietet hochwertige Ausrüstung für Berge, Trekking, Höhen-GPS, Outdoor-Sicherheit, Drohnen, Chalet und praktische Essentials in Kanada.',
+      description: 'TOUSKI bietet hochwertige Ausrüstung für Berge, Mount Iberville, Trekking, Höhen-GPS, Outdoor-Sicherheit, Drohnen, Chalet und praktische Essentials in Kanada.',
       locale: 'de_CA',
     }
   : isSpanish
     ? {
         title: 'TOUSKI – Equipamiento de montaña, trekking, GPS y seguridad outdoor',
-        description: 'TOUSKI ofrece equipamiento premium para montaña, trekking, GPS de altura, drones de seguridad outdoor, cabana y esenciales practicos en Canada.',
+        description: 'TOUSKI ofrece equipamiento premium para montana, Monte Iberville, trekking, GPS de altura, drones de seguridad outdoor, cabana y esenciales practicos en Canada.',
         locale: 'es_CA',
       }
     : isEnglish
       ? {
           title: 'TOUSKI – Mountain gear, trekking, GPS and outdoor safety',
-          description: 'TOUSKI offers premium essentials for mountain adventures, trekking, hiking, high-altitude GPS, outdoor safety drones, cabins and the home in Canada.',
+          description: 'TOUSKI offers premium essentials for mountain adventures, Mount Iberville, trekking, hiking, high-altitude GPS, outdoor safety drones, cabins and the home in Canada.',
           locale: 'en_CA',
         }
       : {
           title: 'TOUSKI – Équipement montagne, trekking, GPS et sécurité outdoor au Québec',
-          description: 'TOUSKI propose au Québec des indispensables premium pour montagne, trekking, randonnée, GPS haute altitude, drones de sécurité outdoor, chalet et maison.',
+          description: "TOUSKI propose au Québec des indispensables premium pour montagne, Mont d'Iberville, trekking, randonnée, GPS haute altitude, drones de sécurité outdoor, chalet et maison.",
           locale: 'fr_CA',
         }
 

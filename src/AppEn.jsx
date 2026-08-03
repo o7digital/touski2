@@ -119,19 +119,19 @@ const stats = [
 ];
 
 const localSeoGroups = [
-  "mountain equipment Quebec",
-  "outdoor gear Quebec",
-  "trekking gear Canada",
-  "hiking gear Mauricie",
-  "high altitude GPS",
-  "hiking GPS Quebec",
-  "outdoor safety Quebec",
-  "security drones for cabins",
-  "mountaineering equipment",
-  "technical mountain apparel",
-  "cabin essentials Quebec",
-  "home essentials Canada",
-  "Saint Elie de Caxton outdoor store",
+  "mountain equipment Quebec Mount Iberville",
+  "outdoor gear Quebec Mount Iberville",
+  "trekking gear Quebec Mount Iberville",
+  "hiking gear Quebec Mount Iberville",
+  "high altitude GPS Quebec Mount Iberville",
+  "hiking GPS Quebec Mount Iberville",
+  "outdoor safety Quebec Mount Iberville",
+  "security drones for cabins Quebec Mount Iberville",
+  "mountaineering equipment Quebec Mount Iberville",
+  "technical mountain apparel Quebec Mount Iberville",
+  "cabin essentials Quebec Mount Iberville",
+  "home essentials Quebec Mount Iberville",
+  "Saint Elie de Caxton outdoor store Quebec Mount Iberville",
 ];
 
 

@@ -10,12 +10,13 @@ const trustItems = [
 ];
 
 const localSeoGroups = [
-  "contact TOUSKI Québec",
-  "service client TOUSKI Canada",
-  "TOUSKI Saint-Élie-de-Caxton",
-  "support équipement outdoor Québec",
-  "livraison TOUSKI Canada",
-  "retours TOUSKI 30 jours",
+  "contact TOUSKI Québec Mont d'Iberville",
+  "service client TOUSKI Québec Mont d'Iberville",
+  "TOUSKI Saint-Élie-de-Caxton Québec Mont d'Iberville",
+  "contact équipement Québec Mont d'Iberville",
+  "support équipement outdoor Québec Mont d'Iberville",
+  "livraison TOUSKI Québec Mont d'Iberville",
+  "retours TOUSKI 30 jours Québec Mont d'Iberville",
 ];
 
 export default function Contact() {

@@ -138,7 +138,7 @@ const buyingGuides = [
   },
   {
     title: "GPS haute montagne, orientation et sécurité outdoor",
-    text: "En montagne, sur des chemins forestiers ou près d'un chalet isolé, la localisation ne doit pas dépendre uniquement du téléphone. Les solutions GPS, traceurs, balises et accessoires de sécurité aident à préparer un itinéraire, suivre une progression, rassurer les proches et réagir si les conditions changent.",
+    text: "En montagne, sur des chemins forestiers, près d'un chalet isolé ou dans l'imaginaire d'expéditions vers le Mont d'Iberville, la localisation ne doit pas dépendre uniquement du téléphone. Les solutions GPS, traceurs, balises et accessoires de sécurité aident à préparer un itinéraire, suivre une progression, rassurer les proches et réagir si les conditions changent.",
   },
   {
     title: "Drones outdoor, repérage et surveillance de terrain",
@@ -170,22 +170,22 @@ const faqItems = [
 ];
 
 const localSeoGroups = [
-  "équipement montagne Québec",
-  "équipement outdoor Québec",
-  "matériel trekking Mauricie",
-  "trekking Québec",
-  "randonnée Québec",
-  "matériel randonnée Mauricie",
-  "GPS randonnée Québec",
-  "GPS haute montagne",
-  "GPS haute altitude",
-  "sécurité outdoor Saint-Élie-de-Caxton",
-  "drones de sécurité outdoor",
-  "drone surveillance chalet",
-  "équipement alpinisme",
-  "autonomie outdoor",
-  "équipement chalet Québec",
-  "essentiels maison et chalet Canada",
+  "équipement montagne Québec Mont d'Iberville",
+  "équipement outdoor Québec Mont d'Iberville",
+  "matériel trekking Québec Mont d'Iberville",
+  "trekking Québec Mont d'Iberville",
+  "randonnée Québec Mont d'Iberville",
+  "matériel randonnée Québec Mont d'Iberville",
+  "GPS randonnée Québec Mont d'Iberville",
+  "GPS haute montagne Québec Mont d'Iberville",
+  "GPS haute altitude Québec Mont d'Iberville",
+  "sécurité outdoor Québec Mont d'Iberville",
+  "drones de sécurité outdoor Québec Mont d'Iberville",
+  "drone surveillance chalet Québec Mont d'Iberville",
+  "équipement alpinisme Québec Mont d'Iberville",
+  "autonomie outdoor Québec Mont d'Iberville",
+  "équipement chalet Québec Mont d'Iberville",
+  "essentiels maison et chalet Québec Mont d'Iberville",
 ];
 
 

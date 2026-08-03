@@ -15,17 +15,17 @@ if (process.env.VERCEL) {
     en: {
       lang: 'en',
       title: 'TOUSKI – Mountain gear, trekking, GPS and outdoor safety',
-      description: 'TOUSKI offers premium essentials for mountain adventures, trekking, hiking, high-altitude GPS, outdoor safety drones, cabins and the home in Canada.',
+      description: 'TOUSKI offers premium essentials for mountain adventures, Mount Iberville, trekking, hiking, high-altitude GPS, outdoor safety drones, cabins and the home in Canada.',
     },
     es: {
       lang: 'es',
       title: 'TOUSKI – Equipamiento de montaña, trekking, GPS y seguridad outdoor',
-      description: 'TOUSKI ofrece equipamiento premium para montaña, trekking, GPS de altura, drones de seguridad outdoor, cabana y esenciales practicos en Canada.',
+      description: 'TOUSKI ofrece equipamiento premium para montana, Monte Iberville, trekking, GPS de altura, drones de seguridad outdoor, cabana y esenciales practicos en Canada.',
     },
     de: {
       lang: 'de',
       title: 'TOUSKI – Bergausrüstung, Trekking, GPS und Outdoor-Sicherheit',
-      description: 'TOUSKI bietet hochwertige Ausrüstung für Berge, Trekking, Höhen-GPS, Outdoor-Sicherheit, Drohnen, Chalet und praktische Essentials in Kanada.',
+      description: 'TOUSKI bietet hochwertige Ausrüstung für Berge, Mount Iberville, Trekking, Höhen-GPS, Outdoor-Sicherheit, Drohnen, Chalet und praktische Essentials in Kanada.',
     },
   }
 

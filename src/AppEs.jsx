@@ -119,19 +119,19 @@ const stats = [
 ];
 
 const localSeoGroups = [
-  "equipamiento de montana Quebec",
-  "equipo outdoor Quebec",
-  "material de trekking Canada",
-  "senderismo Mauricie",
-  "GPS de alta montana",
-  "GPS para senderismo Quebec",
-  "seguridad outdoor Quebec",
-  "drones de seguridad para cabana",
-  "equipamiento de alpinismo",
-  "ropa tecnica de montana",
-  "esenciales para cabana Quebec",
-  "esenciales para el hogar Canada",
-  "tienda outdoor Saint Elie de Caxton",
+  "equipamiento de montana Quebec Monte Iberville",
+  "equipo outdoor Quebec Monte Iberville",
+  "material de trekking Quebec Monte Iberville",
+  "senderismo Quebec Monte Iberville",
+  "GPS de alta montana Quebec Monte Iberville",
+  "GPS para senderismo Quebec Monte Iberville",
+  "seguridad outdoor Quebec Monte Iberville",
+  "drones de seguridad para cabana Quebec Monte Iberville",
+  "equipamiento de alpinismo Quebec Monte Iberville",
+  "ropa tecnica de montana Quebec Monte Iberville",
+  "esenciales para cabana Quebec Monte Iberville",
+  "esenciales para el hogar Quebec Monte Iberville",
+  "tienda outdoor Saint Elie de Caxton Quebec Monte Iberville",
 ];
 
 export default function AppEs() {
