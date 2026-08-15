@@ -4,6 +4,17 @@ const CLIENT_CODE = "touski";
 const CHAT_ENDPOINT = "https://olivia-ai.o7digital.com/api/olivia/chat";
 const CHANNEL_ENDPOINT = "https://olivia-ai.o7digital.com/api/widget/conversations";
 
+function useOliviaFloatingTheme() {
+  useEffect(() => {
+    if (document.querySelector('script[data-olivia-floating-theme]')) return;
+    const script = document.createElement('script');
+    script.src = 'https://olivia-ai.o7digital.com/olivia-floating-theme.js';
+    script.defer = true;
+    script.dataset.oliviaFloatingTheme = 'true';
+    document.head.appendChild(script);
+  }, []);
+}
+
 const copy = {
   fr: {
     title: "Olivia AI",
@@ -91,6 +102,7 @@ function getVisitorId() {
 }
 
 export default function OliviaChat() {
+  useOliviaFloatingTheme();
   const language = useMemo(detectLanguage, []);
   const t = copy[language] || copy.fr;
   const visitorId = useMemo(getVisitorId, []);
