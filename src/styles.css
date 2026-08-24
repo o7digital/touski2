@@ -19,6 +19,10 @@ a, button, input, textarea { outline-color: #fdba74; }
 .balanced { text-wrap: balance; }
 .hero-media picture, .hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-media img { object-fit: cover; object-position: center; }
+.hero-slide { opacity: 0; transition: opacity 900ms ease; }
+.hero-slide.is-active { opacity: 1; }
+.hero-dot { width: .625rem; }
+.hero-dot.is-active { width: 2rem; background: white; }
 .feature-media picture, .feature-media img { display: block; width: 100%; height: 100%; }
 .feature-media img { object-fit: cover; }
 .olivia-messages { scrollbar-color: #fdba74 #f6efe5; }

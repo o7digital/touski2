@@ -12,7 +12,14 @@ import campImage from '../assets/slider/Gemini_Generated_Image_846e9h846e9h846e.
 
 const { locale = 'fr' } = Astro.props
 const content = locales[locale]
+const heroImages = [heroImage, gpsImage, campImage, observationImage]
 const productImages = [gpsImage, observationImage, campImage]
+const sliderLabels = {
+  fr: { previous: 'Image précédente', next: 'Image suivante', goTo: 'Afficher l’image' },
+  en: { previous: 'Previous image', next: 'Next image', goTo: 'Show image' },
+  es: { previous: 'Imagen anterior', next: 'Imagen siguiente', goTo: 'Mostrar imagen' },
+  de: { previous: 'Vorheriges Bild', next: 'Nächstes Bild', goTo: 'Bild anzeigen' },
+}[locale] || { previous: 'Previous image', next: 'Next image', goTo: 'Show image' }
 const schemas = [
   { '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: site.url, inLanguage: Object.values(locales).map((item) => item.hreflang) },
   { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: content.faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
@@ -20,9 +27,13 @@ const schemas = [
 ---
 <BaseLayout title={content.meta.title} description={content.meta.description} lang={content.lang} locale={content.locale} canonicalPath={content.path} alternates={homeAlternates} schemas={schemas}>
   <main>
-    <section class="relative min-h-[92svh] overflow-hidden border-b border-white/10">
+    <section data-hero-slider class="relative min-h-[92svh] overflow-hidden border-b border-white/10">
       <div class="hero-media absolute inset-0">
-        <Picture src={heroImage} formats={['avif']} fallbackFormat="webp" widths={[480, 768, 1024, 1376]} sizes="100vw" alt={content.hero.imageAlt} loading="eager" fetchpriority="high" />
+        {heroImages.map((image, index) => (
+          <div data-hero-slide aria-hidden={index === 0 ? 'false' : 'true'} class:list={['hero-slide absolute inset-0', { 'is-active': index === 0 }]}>
+            <Picture src={image} formats={['avif']} fallbackFormat="webp" widths={[480, 768, 1024, 1376]} sizes="100vw" alt={index === 0 ? content.hero.imageAlt : ''} loading={index === 0 ? 'eager' : 'lazy'} fetchpriority={index === 0 ? 'high' : 'auto'} />
+          </div>
+        ))}
         <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,8,6,.38)_0%,rgba(3,8,6,.32)_45%,rgba(3,8,6,.9)_100%)]"></div>
       </div>
       <Header content={content} home={true} />
@@ -34,6 +45,13 @@ const schemas = [
           <div class="mt-9 flex flex-wrap gap-3">
             <a href="#selection" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#102018] transition hover:-translate-y-0.5">{content.hero.primary}</a>
             <a href="#guides" class="glass rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-white/10">{content.hero.secondary}</a>
+          </div>
+          <div class="mt-8 flex items-center gap-3" aria-label="Image carousel controls">
+            <button data-hero-previous type="button" class="glass grid size-10 place-items-center rounded-full text-lg transition hover:bg-white/15" aria-label={sliderLabels.previous}>‹</button>
+            <div class="flex items-center gap-2">
+              {heroImages.map((_, index) => <button data-hero-dot={index} type="button" class:list={['hero-dot h-2.5 rounded-full bg-white/40 transition-all', { 'is-active': index === 0 }]} aria-label={`${sliderLabels.goTo} ${index + 1}`} aria-current={index === 0 ? 'true' : 'false'}></button>)}
+            </div>
+            <button data-hero-next type="button" class="glass grid size-10 place-items-center rounded-full text-lg transition hover:bg-white/15" aria-label={sliderLabels.next}>›</button>
           </div>
         </div>
       </div>
@@ -77,3 +95,41 @@ const schemas = [
   <Footer content={content} />
   <OliviaChat copy={content.chat} lang={content.lang} />
 </BaseLayout>
+
+<script>
+  document.querySelectorAll('[data-hero-slider]').forEach((slider) => {
+    if (!(slider instanceof HTMLElement) || slider.dataset.ready) return
+    slider.dataset.ready = 'true'
+    const slides = [...slider.querySelectorAll('[data-hero-slide]')]
+    const dots = [...slider.querySelectorAll('[data-hero-dot]')]
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    let active = 0
+    let timer: number | undefined
+
+    const show = (next: number) => {
+      active = (next + slides.length) % slides.length
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('is-active', index === active)
+        slide.setAttribute('aria-hidden', String(index !== active))
+      })
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('is-active', index === active)
+        dot.setAttribute('aria-current', String(index === active))
+      })
+    }
+    const stop = () => { if (timer) window.clearInterval(timer) }
+    const start = () => {
+      stop()
+      if (!reducedMotion) timer = window.setInterval(() => show(active + 1), 6000)
+    }
+    slider.querySelector('[data-hero-previous]')?.addEventListener('click', () => { show(active - 1); start() })
+    slider.querySelector('[data-hero-next]')?.addEventListener('click', () => { show(active + 1); start() })
+    dots.forEach((dot, index) => dot.addEventListener('click', () => { show(index); start() }))
+    slider.addEventListener('mouseenter', stop)
+    slider.addEventListener('mouseleave', start)
+    slider.addEventListener('focusin', stop)
+    slider.addEventListener('focusout', start)
+    document.addEventListener('visibilitychange', () => document.hidden ? stop() : start())
+    start()
+  })
+</script>
