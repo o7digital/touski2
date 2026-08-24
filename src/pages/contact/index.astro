@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import Footer from '../../components/Footer.astro'
+import Header from '../../components/Header.astro'
+import OliviaChat from '../../components/OliviaChat.astro'
+import { locales, site } from '../../data/site.js'
+const content = locales.fr
+const title = 'Contacter TOUSKI | Service client au Québec'
+const description = 'Coordonnées et formulaire de contact TOUSKI pour les questions sur les produits, la livraison et le choix d’équipement au Canada.'
+const schemas = [{ '@context': 'https://schema.org', '@type': 'ContactPage', name: title, url: `${site.url}/contact`, inLanguage: 'fr-CA' }]
+---
+<BaseLayout title={title} description={description} canonicalPath="/contact" schemas={schemas}>
+  <Header content={content} />
+  <main>
+    <section class="shell grid gap-12 pb-24 pt-14 lg:grid-cols-[.8fr_1.2fr] lg:pt-20">
+      <div>
+        <p class="eyebrow">Nous contacter</p>
+        <h1 class="balanced mt-5 text-5xl font-semibold leading-tight md:text-7xl">Parlons de votre prochaine sortie.</h1>
+        <p class="mt-6 max-w-xl text-lg leading-8 text-white/68">Une question sur un produit, la livraison ou le matériel adapté à votre itinéraire? Écrivez-nous. Nous répondons du lundi au vendredi, de 9 h à 17 h, heure de l’Est.</p>
+        <address class="card mt-9 rounded-3xl p-7 text-sm not-italic leading-8 text-white/70">
+          <strong class="text-lg text-white">TOUSKI</strong><br />{site.address}<br />
+          <a href={`mailto:${site.email}`} class="hover:text-white">{site.email}</a><br />
+          <a href={site.phoneHref} class="hover:text-white">{site.phone}</a>
+        </address>
+      </div>
+      <form data-contact-form class="card rounded-3xl p-7 md:p-9">
+        <h2 class="text-3xl font-semibold">Envoyer un message</h2>
+        <div class="mt-7 grid gap-5 sm:grid-cols-2">
+          <label class="text-sm text-white/70">Prénom<input required name="firstName" autocomplete="given-name" class="mt-2 w-full rounded-xl border border-white/15 bg-white/[.07] px-4 py-3 text-white" /></label>
+          <label class="text-sm text-white/70">Nom<input required name="lastName" autocomplete="family-name" class="mt-2 w-full rounded-xl border border-white/15 bg-white/[.07] px-4 py-3 text-white" /></label>
+          <label class="text-sm text-white/70 sm:col-span-2">Courriel<input required name="email" type="email" autocomplete="email" class="mt-2 w-full rounded-xl border border-white/15 bg-white/[.07] px-4 py-3 text-white" /></label>
+          <label class="text-sm text-white/70 sm:col-span-2">Téléphone <span class="text-white/40">(facultatif)</span><input name="phone" type="tel" autocomplete="tel" class="mt-2 w-full rounded-xl border border-white/15 bg-white/[.07] px-4 py-3 text-white" /></label>
+          <label class="text-sm text-white/70 sm:col-span-2">Message<textarea required name="message" rows="6" class="mt-2 w-full resize-y rounded-xl border border-white/15 bg-white/[.07] px-4 py-3 text-white"></textarea></label>
+          <button class="rounded-xl bg-orange-300 px-6 py-3 font-semibold text-[#172019] disabled:opacity-60 sm:col-span-2">Envoyer</button>
+          <p data-contact-status class="text-sm text-white/65 sm:col-span-2" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+  <Footer content={content} />
+  <OliviaChat copy={content.chat} lang="fr" />
+</BaseLayout>
+
+<script>
+  // @ts-nocheck
+  const form = document.querySelector('[data-contact-form]')
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault()
+    if (!(form instanceof HTMLFormElement)) return
+    const status = form.querySelector('[data-contact-status]')
+    const button = form.querySelector('button')
+    const values = Object.fromEntries(new FormData(form))
+    if (button instanceof HTMLButtonElement) button.disabled = true
+    if (status) status.textContent = 'Envoi en cours…'
+    try {
+      const response = await fetch('https://olivia-ai.o7digital.com/api/widget/conversations', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ clientCode: 'touski', visitorId: crypto.randomUUID?.() || String(Date.now()), content: values.message, visitorName: `${values.firstName} ${values.lastName}`, email: values.email, phone: values.phone, source: 'contact-form', language: 'fr', metadata: { type: 'contact', pageUrl: location.href } }),
+      })
+      if (!response.ok) throw new Error('Delivery failed')
+      form.reset()
+      if (status) status.textContent = 'Merci. Votre message a bien été envoyé.'
+    } catch {
+      if (status) status.textContent = 'L’envoi a échoué. Écrivez-nous directement à contact@touski.online.'
+    } finally { if (button instanceof HTMLButtonElement) button.disabled = false }
+  })
+</script>

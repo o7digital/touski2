@@ -1,0 +1,79 @@
+---
+import { Picture } from 'astro:assets'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Footer from './Footer.astro'
+import Header from './Header.astro'
+import OliviaChat from './OliviaChat.astro'
+import { homeAlternates, locales, site } from '../data/site.js'
+import heroImage from '../assets/slider/Gemini_Generated_Image_9sfdnd9sfdnd9sfd.webp'
+import gpsImage from '../assets/slider/Gemini_Generated_Image_g5vfyfg5vfyfg5vf.webp'
+import observationImage from '../assets/slider/Gemini_Generated_Image_j97qjj97qjj97qjj.webp'
+import campImage from '../assets/slider/Gemini_Generated_Image_846e9h846e9h846e.webp'
+
+const { locale = 'fr' } = Astro.props
+const content = locales[locale]
+const productImages = [gpsImage, observationImage, campImage]
+const schemas = [
+  { '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: site.url, inLanguage: Object.values(locales).map((item) => item.hreflang) },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: content.faq.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
+]
+---
+<BaseLayout title={content.meta.title} description={content.meta.description} lang={content.lang} locale={content.locale} canonicalPath={content.path} alternates={homeAlternates} schemas={schemas}>
+  <main>
+    <section class="relative min-h-[92svh] overflow-hidden border-b border-white/10">
+      <div class="hero-media absolute inset-0">
+        <Picture src={heroImage} formats={['avif']} fallbackFormat="webp" widths={[480, 768, 1024, 1376]} sizes="100vw" alt={content.hero.imageAlt} loading="eager" fetchpriority="high" />
+        <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,8,6,.38)_0%,rgba(3,8,6,.32)_45%,rgba(3,8,6,.9)_100%)]"></div>
+      </div>
+      <Header content={content} home={true} />
+      <div class="shell relative z-10 flex min-h-[calc(92svh-100px)] items-end pb-16 pt-32 md:pb-24">
+        <div class="max-w-5xl">
+          <p class="eyebrow">{content.hero.eyebrow}</p>
+          <h1 class="balanced mt-5 text-5xl font-semibold leading-[.98] tracking-tight sm:text-6xl lg:text-8xl">{content.hero.title}</h1>
+          <p class="mt-7 max-w-3xl text-lg leading-8 text-white/82 md:text-xl">{content.hero.text}</p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="#selection" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#102018] transition hover:-translate-y-0.5">{content.hero.primary}</a>
+            <a href="#guides" class="glass rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-white/10">{content.hero.secondary}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="univers" class="shell py-20 md:py-28">
+      <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
+        <div><p class="eyebrow">{content.intro.eyebrow}</p><h2 class="balanced mt-4 text-4xl font-semibold leading-tight md:text-5xl">{content.intro.title}</h2><p class="mt-6 leading-8 text-white/65">{content.intro.text}</p></div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {content.pillars.map(([title, text]: [string, string], index: number) => <article class="card rounded-3xl p-7"><p class="text-sm text-orange-200/70">0{index + 1}</p><h3 class="mt-4 text-2xl font-semibold">{title}</h3><p class="mt-3 leading-7 text-white/65">{text}</p></article>)}
+        </div>
+      </div>
+    </section>
+
+    <section id="selection" class="border-y border-white/10 bg-[#0b1712] py-20 md:py-28">
+      <div class="shell">
+        <p class="eyebrow">{content.selection.eyebrow}</p>
+        <div class="mt-4 grid gap-6 lg:grid-cols-[1fr_.7fr] lg:items-end"><h2 class="balanced text-4xl font-semibold md:text-6xl">{content.selection.title}</h2><p class="leading-8 text-white/65">{content.selection.text}</p></div>
+        <div class="mt-12 grid gap-5 lg:grid-cols-3">
+          {content.products.map(([title, text, alt]: [string, string, string], index: number) => <article class="card group overflow-hidden rounded-3xl"><div class="feature-media aspect-[4/3] overflow-hidden"><Picture src={productImages[index]} formats={['avif']} fallbackFormat="webp" widths={[360, 540, 760]} sizes="(min-width: 1024px) 33vw, 100vw" alt={alt} loading="lazy" class="transition duration-500 group-hover:scale-105" /></div><div class="p-7"><h3 class="text-2xl font-semibold">{title}</h3><p class="mt-3 leading-7 text-white/65">{text}</p></div></article>)}
+        </div>
+      </div>
+    </section>
+
+    <section id="guides" class="shell py-20 md:py-28">
+      <p class="eyebrow">{content.guides.eyebrow}</p>
+      <h2 class="balanced mt-4 max-w-4xl text-4xl font-semibold md:text-6xl">{content.guides.title}</h2>
+      <p class="mt-5 max-w-2xl leading-8 text-white/65">{content.guides.text}</p>
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        {content.guides.cards.map(([href, title, text]) => <a href={href} hreflang="fr-CA" class="card rounded-3xl p-7 transition hover:-translate-y-1 hover:bg-white/[.07]"><h3 class="text-xl font-semibold">{title}</h3><p class="mt-3 text-sm leading-7 text-white/65">{text}</p><span class="mt-6 inline-block text-orange-200" aria-hidden="true">→</span></a>)}
+      </div>
+    </section>
+
+    <section id="faq" class="border-t border-white/10 bg-[#07100c] py-20">
+      <div class="shell grid gap-10 lg:grid-cols-[.55fr_1fr]">
+        <h2 class="text-4xl font-semibold">{content.faqTitle}</h2>
+        <div class="space-y-4">{content.faq.map(([question, answer]) => <details class="card rounded-2xl p-6"><summary class="cursor-pointer font-semibold">{question}</summary><p class="mt-4 leading-7 text-white/65">{answer}</p></details>)}</div>
+      </div>
+    </section>
+  </main>
+  <Footer content={content} />
+  <OliviaChat copy={content.chat} lang={content.lang} />
+</BaseLayout>

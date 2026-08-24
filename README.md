@@ -1,16 +1,15 @@
-# React + Vite
+# TOUSKI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site statique multilingue construit avec Astro.
 
-Currently, two official plugins are available:
+## Commandes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+npm run check
+npm run build
+npm run preview
+```
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Les pages sont générées intégralement en HTML. Les images locales passent par `astro:assets` pour produire des variantes AVIF et WebP responsives. Le sitemap est généré automatiquement pendant la compilation.

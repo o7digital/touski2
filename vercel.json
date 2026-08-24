@@ -1,36 +1,12 @@
 {
-  "rewrites": [
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
     {
-      "source": "/en",
-      "destination": "/en/index.html"
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact/index.html"
-    },
-    {
-      "source": "/equipement-montagne-quebec-mont-iberville",
-      "destination": "/equipement-montagne-quebec-mont-iberville/index.html"
-    },
-    {
-      "source": "/gps-haute-montagne-quebec-mont-iberville",
-      "destination": "/gps-haute-montagne-quebec-mont-iberville/index.html"
-    },
-    {
-      "source": "/trekking-randonnee-quebec-mont-iberville",
-      "destination": "/trekking-randonnee-quebec-mont-iberville/index.html"
-    },
-    {
-      "source": "/es",
-      "destination": "/es/index.html"
-    },
-    {
-      "source": "/de",
-      "destination": "/de/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/_astro/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     }
   ]
 }

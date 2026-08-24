@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://touski.online/sitemap.xml
+Sitemap: https://touski.online/sitemap-index.xml

@@ -1,0 +1,125 @@
+---
+const { copy, lang } = Astro.props
+---
+<div data-olivia data-lang={lang} data-copy={JSON.stringify(copy)} class="fixed bottom-4 right-4 z-[100] font-sans">
+  <section data-chat-panel hidden class="mb-3 flex h-[min(660px,calc(100vh-100px))] w-[min(410px,calc(100vw-24px))] flex-col overflow-hidden rounded-3xl border border-orange-200/40 bg-[#101813] text-white shadow-2xl" aria-label={copy.title}>
+    <header class="flex items-start justify-between gap-4 border-b border-white/10 bg-[#172019] p-5">
+      <div><p class="text-xl font-bold text-orange-200">{copy.title}</p><p class="mt-1 text-sm text-white/60">{copy.status}</p></div>
+      <button type="button" data-chat-close class="rounded-xl bg-white/10 px-3 py-2" aria-label={copy.close}>×</button>
+    </header>
+    <div data-chat-messages class="olivia-messages flex-1 space-y-3 overflow-y-auto bg-[#f6efe5] p-4 text-[#172019]" aria-live="polite">
+      <p class="max-w-[88%] rounded-2xl bg-white px-4 py-3 text-sm leading-6">{copy.welcome}</p>
+    </div>
+    <form data-lead-form class="grid grid-cols-2 gap-2 border-t border-white/10 bg-[#172019] p-4">
+      <p class="col-span-2 text-xs leading-5 text-white/65">{copy.leadIntro}</p>
+      <input required name="firstName" autocomplete="given-name" aria-label={copy.firstName} placeholder={copy.firstName} class="min-w-0 rounded-xl bg-white px-3 py-2 text-sm text-[#172019]" />
+      <input required name="lastName" autocomplete="family-name" aria-label={copy.lastName} placeholder={copy.lastName} class="min-w-0 rounded-xl bg-white px-3 py-2 text-sm text-[#172019]" />
+      <input required name="email" type="email" autocomplete="email" aria-label={copy.email} placeholder={copy.email} class="min-w-0 rounded-xl bg-white px-3 py-2 text-sm text-[#172019]" />
+      <input required name="phone" type="tel" autocomplete="tel" aria-label={copy.phone} placeholder={copy.phone} class="min-w-0 rounded-xl bg-white px-3 py-2 text-sm text-[#172019]" />
+      <textarea required name="need" rows="2" aria-label={copy.need} placeholder={copy.need} class="col-span-2 min-h-18 resize-y rounded-xl bg-white px-3 py-2 text-sm text-[#172019]"></textarea>
+      <button class="col-span-2 rounded-xl bg-orange-300 px-4 py-3 text-sm font-bold text-[#172019] disabled:opacity-60">{copy.sendDetails}</button>
+    </form>
+    <form data-message-form hidden class="flex gap-2 border-t border-white/10 bg-[#172019] p-4">
+      <label class="sr-only" for={`olivia-message-${lang}`}>{copy.placeholder}</label>
+      <input id={`olivia-message-${lang}`} name="message" required placeholder={copy.placeholder} class="min-w-0 flex-1 rounded-xl bg-white px-4 py-3 text-sm text-[#172019]" />
+      <button aria-label={copy.send} class="rounded-xl bg-orange-300 px-4 py-3 font-bold text-[#172019] disabled:opacity-60">›</button>
+    </form>
+  </section>
+  <div class="flex items-center justify-end gap-2">
+    <button type="button" data-chat-teaser class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#172019] shadow-xl">{copy.teaser}</button>
+    <button type="button" data-chat-toggle aria-expanded="false" class="h-16 rounded-full bg-[#172019] px-5 font-bold text-orange-200 shadow-xl">Olivia</button>
+  </div>
+</div>
+
+<script>
+  // @ts-nocheck
+  const CLIENT_CODE = 'touski'
+  const CHAT_ENDPOINT = 'https://olivia-ai.o7digital.com/api/olivia/chat'
+  const CHANNEL_ENDPOINT = 'https://olivia-ai.o7digital.com/api/widget/conversations'
+
+  document.querySelectorAll('[data-olivia]').forEach((root) => {
+    if (!(root instanceof HTMLElement) || root.dataset.ready) return
+    root.dataset.ready = 'true'
+    const copy = JSON.parse(root.dataset.copy || '{}')
+    const language = root.dataset.lang || 'fr'
+    const panel = root.querySelector('[data-chat-panel]')
+    const toggle = root.querySelector('[data-chat-toggle]')
+    const teaser = root.querySelector('[data-chat-teaser]')
+    const close = root.querySelector('[data-chat-close]')
+    const leadForm = root.querySelector('[data-lead-form]')
+    const messageForm = root.querySelector('[data-message-form]')
+    const messages = root.querySelector('[data-chat-messages]')
+    const storageKey = `oliviaVisitorId:${CLIENT_CODE}`
+    let visitorId = localStorage.getItem(storageKey)
+    if (!visitorId) {
+      visitorId = crypto.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`
+      localStorage.setItem(storageKey, visitorId)
+    }
+    let lead = {}
+    let transcript = `assistant: ${copy.welcome}`
+
+    const setOpen = (open) => {
+      if (panel instanceof HTMLElement) panel.hidden = !open
+      if (teaser instanceof HTMLElement) teaser.hidden = open
+      toggle?.setAttribute('aria-expanded', String(open))
+      if (toggle) toggle.textContent = open ? '×' : 'Olivia'
+    }
+    const addMessage = (role, text) => {
+      const item = document.createElement('p')
+      item.className = `max-w-[88%] rounded-2xl px-4 py-3 text-sm leading-6 ${role === 'user' ? 'ml-auto bg-orange-200' : 'bg-white'}`
+      item.textContent = text
+      messages?.appendChild(item)
+      if (messages instanceof HTMLElement) messages.scrollTop = messages.scrollHeight
+      transcript += `\n${role}: ${text}`
+    }
+    const storeMessage = async (content, metadata = {}) => {
+      const response = await fetch(CHANNEL_ENDPOINT, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ clientCode: CLIENT_CODE, visitorId, content, visitorName: `${lead.firstName || ''} ${lead.lastName || ''}`.trim(), email: lead.email, phone: lead.phone, source: 'website', language, metadata: { pageUrl: location.href, pageTitle: document.title, ...metadata } }),
+      })
+      if (!response.ok) throw new Error('Delivery failed')
+      return response.json()
+    }
+
+    toggle?.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'))
+    teaser?.addEventListener('click', () => setOpen(true))
+    close?.addEventListener('click', () => setOpen(false))
+    leadForm?.addEventListener('submit', async (event) => {
+      event.preventDefault()
+      if (!(leadForm instanceof HTMLFormElement)) return
+      const button = leadForm.querySelector('button')
+      const values = Object.fromEntries(new FormData(leadForm))
+      lead = values
+      if (button instanceof HTMLButtonElement) button.disabled = true
+      try {
+        await storeMessage(`Lead: ${values.firstName} ${values.lastName} · ${values.email} · ${values.phone} · ${values.need}`, { type: 'lead', lead, transcript })
+        addMessage('assistant', copy.detailsSent)
+        leadForm.hidden = true
+        if (messageForm instanceof HTMLElement) messageForm.hidden = false
+        messageForm?.querySelector('input')?.focus()
+      } catch { addMessage('assistant', copy.error) }
+      finally { if (button instanceof HTMLButtonElement) button.disabled = false }
+    })
+    messageForm?.addEventListener('submit', async (event) => {
+      event.preventDefault()
+      if (!(messageForm instanceof HTMLFormElement)) return
+      const input = messageForm.elements.namedItem('message')
+      if (!(input instanceof HTMLInputElement) || !input.value.trim()) return
+      const message = input.value.trim()
+      input.value = ''
+      input.disabled = true
+      addMessage('user', message)
+      try {
+        const stored = await storeMessage(message, { lead, transcript })
+        if (stored?.conversation?.status !== 'manual') {
+          const response = await fetch(CHAT_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message, language, clientCode: CLIENT_CODE, clientId: CLIENT_CODE, siteCode: CLIENT_CODE, visitorId, pageUrl: location.href, metadata: { source: 'Chat Olivia TOUSKI', pageTitle: document.title, lead, transcript } }) })
+          const data = await response.json()
+          const reply = data.reply || copy.error
+          addMessage('assistant', reply)
+          fetch(CHANNEL_ENDPOINT, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ clientCode: CLIENT_CODE, visitorId, content: reply, model: data.model }) }).catch(() => {})
+        }
+      } catch { addMessage('assistant', copy.error) }
+      finally { input.disabled = false; input.focus() }
+    })
+  })
+</script>

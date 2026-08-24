@@ -1,0 +1,164 @@
+export const site = {
+  name: 'TOUSKI',
+  url: 'https://touski.online',
+  email: 'contact@touski.online',
+  phone: '+1 819-701-0378',
+  phoneHref: 'tel:+18197010378',
+  address: '1030, Avenue Muguette, Saint-Élie-de-Caxton, QC G0X 2N0, Canada',
+}
+
+const sharedLinks = [
+  { href: '#univers', key: 'universe' },
+  { href: '#selection', key: 'selection' },
+  { href: '#guides', key: 'guides' },
+  { href: '#faq', key: 'faq' },
+]
+
+export const homeAlternates = {
+  'fr-CA': '/',
+  'en-CA': '/en',
+  'es-CA': '/es',
+  'de-CA': '/de',
+  'x-default': '/',
+}
+
+export const locales = {
+  fr: {
+    lang: 'fr', hreflang: 'fr-CA', path: '/', locale: 'fr_CA',
+    meta: {
+      title: 'TOUSKI | Équipement de montagne et plein air au Québec',
+      description: 'Équipement de randonnée, orientation, sécurité et autonomie sélectionné au Québec pour les sorties en montagne, le chalet et la maison.',
+    },
+    nav: { universe: 'Univers', selection: 'Sélection', guides: 'Guides', faq: 'FAQ', contact: 'Contact', menu: 'Menu', close: 'Fermer' },
+    hero: {
+      eyebrow: 'Équipement plein air sélectionné au Québec',
+      title: 'Plus d’autonomie sur le sentier, moins de matériel inutile.',
+      text: 'TOUSKI sélectionne des équipements fiables pour la randonnée, l’orientation et la sécurité en terrain isolé, avec des conseils adaptés aux conditions québécoises.',
+      primary: 'Découvrir la sélection', secondary: 'Préparer une sortie', imageAlt: 'Randonneur devant une chaîne de montagnes au lever du jour',
+    },
+    intro: { eyebrow: 'Nos priorités', title: 'Du matériel choisi pour résoudre de vrais besoins.', text: 'Chaque catégorie répond à une situation concrète : s’orienter hors réseau, rester visible, gérer l’eau et l’énergie ou améliorer le confort au camp.' },
+    pillars: [
+      ['Orientation hors réseau', 'GPS, cartes et outils de repérage pour garder le cap lorsque le téléphone ne suffit plus.'],
+      ['Sécurité en montagne', 'Éclairage, signalisation et accessoires de secours adaptés aux changements rapides de météo.'],
+      ['Autonomie en randonnée', 'Solutions légères pour l’eau, l’énergie, les réparations et les sorties de plusieurs jours.'],
+      ['Chalet et maison', 'Produits robustes et simples qui restent utiles après le retour du sentier.'],
+    ],
+    selection: { eyebrow: 'Sélection', title: 'Trois familles d’équipement à comparer', text: 'Nous privilégions l’usage, la durabilité et la facilité d’entretien avant les fonctions superflues.' },
+    products: [
+      ['Orientation et GPS', 'Comparer l’autonomie, la lisibilité, la résistance au froid et les fonctions réellement disponibles hors réseau.', 'Récepteur GPS tenu en main dans un environnement montagneux'],
+      ['Observation et sécurité', 'Évaluer la portée, les limites réglementaires et les conditions d’utilisation avant de partir sur le terrain.', 'Équipement d’observation utilisé dans une vallée isolée'],
+      ['Protection et bivouac', 'Choisir selon la saison, le poids transporté et le niveau d’exposition prévu.', 'Matériel de bivouac installé près des montagnes'],
+    ],
+    guides: { eyebrow: 'Conseils terrain', title: 'Préparer sa sortie avant d’acheter', text: 'Des guides courts et concrets pour comparer les options et planifier une sortie au Québec.', cards: [
+      ['/equipement-montagne-quebec-mont-iberville', 'Choisir son équipement de montagne', 'Une méthode simple basée sur l’itinéraire, la météo, l’autonomie et les solutions de repli.'],
+      ['/gps-haute-montagne-quebec-mont-iberville', 'GPS et orientation hors réseau', 'Les critères à vérifier pour la navigation, la batterie et les communications d’urgence.'],
+      ['/trekking-randonnee-quebec-mont-iberville', 'Liste de matériel pour randonnée', 'Adapter son sac à la durée, à la saison et à l’éloignement des services.'],
+    ] },
+    faqTitle: 'Questions fréquentes',
+    faq: [
+      ['Comment TOUSKI choisit-il son matériel?', 'Nous évaluons l’utilité sur le terrain, la durabilité, l’entretien, le poids et l’adaptation aux saisons canadiennes.'],
+      ['Un téléphone remplace-t-il toujours un GPS?', 'Non. Hors couverture, un appareil dédié, une carte hors ligne et une solution de secours peuvent offrir davantage d’autonomie et de fiabilité.'],
+      ['Livrez-vous partout au Canada?', 'Oui. Les délais et frais exacts sont confirmés avant la commande selon la province et le produit.'],
+    ],
+    footer: { tagline: 'Équipement utile pour le plein air, le chalet et la maison.', rights: 'Tous droits réservés.', languages: 'Langues' },
+    chat: { title:'Olivia AI', status:'Assistante TOUSKI · En ligne', teaser:'Besoin d’aide?', welcome:'Bonjour, je suis Olivia. Je peux vous aider à comparer votre équipement.', leadIntro:'Laissez vos coordonnées pour poursuivre avec Olivia ou être rappelé par TOUSKI.', firstName:'Prénom', lastName:'Nom', email:'Courriel', phone:'Téléphone', need:'Votre besoin', sendDetails:'Continuer', detailsSent:'Merci. Posez maintenant votre question.', placeholder:'Votre question…', send:'Envoyer', close:'Fermer', error:'Le message n’a pas pu être envoyé. Écrivez-nous à contact@touski.online.' },
+  },
+  en: {
+    lang: 'en', hreflang: 'en-CA', path: '/en', locale: 'en_CA',
+    meta: { title: 'TOUSKI | Mountain and outdoor gear in Canada', description: 'Hiking, navigation, safety and self-reliance gear selected in Quebec for mountain trips, cabins and everyday use.' },
+    nav: { universe: 'Gear', selection: 'Selection', guides: 'Guides', faq: 'FAQ', contact: 'Contact', menu: 'Menu', close: 'Close' },
+    hero: { eyebrow: 'Outdoor gear selected in Quebec', title: 'More confidence on the trail, less unnecessary gear.', text: 'TOUSKI selects dependable equipment for hiking, navigation and safety in remote terrain, with advice suited to Canadian conditions.', primary: 'Explore the selection', secondary: 'Plan a trip', imageAlt: 'Hiker facing a mountain range at sunrise' },
+    intro: { eyebrow: 'Our priorities', title: 'Gear selected to solve real outdoor needs.', text: 'Each category addresses a practical situation: navigating off-grid, staying visible, managing water and power, or improving camp comfort.' },
+    pillars: [
+      ['Off-grid navigation', 'GPS devices, maps and navigation tools for places where a phone alone is not enough.'],
+      ['Mountain safety', 'Lighting, signalling and emergency accessories for fast-changing weather.'],
+      ['Hiking self-reliance', 'Lightweight solutions for water, power, repairs and multi-day trips.'],
+      ['Cabin and home', 'Simple, durable products that remain useful after the trail.'],
+    ],
+    selection: { eyebrow: 'Selection', title: 'Three gear families worth comparing', text: 'We prioritize practical use, durability and easy maintenance over unnecessary features.' },
+    products: [
+      ['Navigation and GPS', 'Compare battery life, screen readability, cold resistance and features that truly work off-grid.', 'Handheld GPS receiver in a mountain environment'],
+      ['Observation and safety', 'Review range, regulations and operating limits before using equipment in the field.', 'Observation equipment used in a remote valley'],
+      ['Protection and camp', 'Choose according to season, carried weight and expected exposure.', 'Camping equipment set up near the mountains'],
+    ],
+    guides: { eyebrow: 'Field advice', title: 'Plan the trip before buying', text: 'Our detailed guides are currently available in French and focus on Quebec terrain.', cards: [
+      ['/equipement-montagne-quebec-mont-iberville', 'Choosing mountain equipment', 'A practical method based on route, weather, self-reliance and backup plans.'],
+      ['/gps-haute-montagne-quebec-mont-iberville', 'GPS and off-grid navigation', 'What to check for navigation, battery life and emergency communication.'],
+      ['/trekking-randonnee-quebec-mont-iberville', 'A hiking gear checklist', 'Adapt your pack to trip length, season and distance from services.'],
+    ] },
+    faqTitle: 'Frequently asked questions',
+    faq: [
+      ['How does TOUSKI select gear?', 'We assess field usefulness, durability, maintenance, weight and suitability for Canadian seasons.'],
+      ['Does a phone always replace a GPS?', 'No. Outside cellular coverage, a dedicated device, offline map and backup plan can offer better endurance and reliability.'],
+      ['Do you ship across Canada?', 'Yes. Exact timeframes and fees are confirmed before purchase according to province and product.'],
+    ],
+    footer: { tagline: 'Useful gear for the outdoors, cabin and home.', rights: 'All rights reserved.', languages: 'Languages' },
+    chat: { title:'Olivia AI', status:'TOUSKI assistant · Online', teaser:'Need help?', welcome:'Hello, I’m Olivia. I can help you compare outdoor equipment.', leadIntro:'Leave your details to continue with Olivia or hear from TOUSKI.', firstName:'First name', lastName:'Last name', email:'Email', phone:'Phone', need:'Your needs', sendDetails:'Continue', detailsSent:'Thank you. You can now ask your question.', placeholder:'Your question…', send:'Send', close:'Close', error:'The message could not be sent. Email us at contact@touski.online.' },
+  },
+  es: {
+    lang: 'es', hreflang: 'es-CA', path: '/es', locale: 'es_CA',
+    meta: { title: 'TOUSKI | Equipo de montaña y aire libre en Canadá', description: 'Equipo de senderismo, orientación, seguridad y autonomía seleccionado en Quebec para la montaña, la cabaña y el hogar.' },
+    nav: { universe: 'Equipo', selection: 'Selección', guides: 'Guías', faq: 'Preguntas', contact: 'Contacto', menu: 'Menú', close: 'Cerrar' },
+    hero: { eyebrow: 'Equipo de aire libre seleccionado en Quebec', title: 'Más autonomía en el sendero, menos equipo innecesario.', text: 'TOUSKI selecciona equipo fiable para senderismo, orientación y seguridad en zonas remotas, con consejos adaptados a las condiciones canadienses.', primary: 'Ver la selección', secondary: 'Preparar una salida', imageAlt: 'Senderista frente a una cordillera al amanecer' },
+    intro: { eyebrow: 'Nuestras prioridades', title: 'Equipo elegido para necesidades reales.', text: 'Cada categoría responde a una situación concreta: orientarse sin red, mantenerse visible, gestionar agua y energía o mejorar el campamento.' },
+    pillars: [
+      ['Orientación sin conexión', 'GPS, mapas y herramientas de navegación para lugares donde el teléfono no es suficiente.'],
+      ['Seguridad en montaña', 'Iluminación, señalización y accesorios de emergencia para cambios rápidos del tiempo.'],
+      ['Autonomía en ruta', 'Soluciones ligeras para agua, energía, reparaciones y travesías de varios días.'],
+      ['Cabaña y hogar', 'Productos sencillos y duraderos que siguen siendo útiles después de la ruta.'],
+    ],
+    selection: { eyebrow: 'Selección', title: 'Tres familias de equipo para comparar', text: 'Priorizamos la utilidad, la durabilidad y el mantenimiento sencillo.' },
+    products: [
+      ['Orientación y GPS', 'Compara autonomía, legibilidad, resistencia al frío y funciones disponibles sin conexión.', 'Receptor GPS de mano en un entorno montañoso'],
+      ['Observación y seguridad', 'Comprueba el alcance, la normativa y los límites de uso antes de salir.', 'Equipo de observación utilizado en un valle remoto'],
+      ['Protección y campamento', 'Elige según la temporada, el peso y la exposición prevista.', 'Equipo de campamento cerca de las montañas'],
+    ],
+    guides: { eyebrow: 'Consejos de campo', title: 'Preparar la salida antes de comprar', text: 'Las guías detalladas están disponibles por ahora en francés y se centran en Quebec.', cards: [
+      ['/equipement-montagne-quebec-mont-iberville', 'Elegir equipo de montaña', 'Un método basado en ruta, clima, autonomía y planes alternativos.'],
+      ['/gps-haute-montagne-quebec-mont-iberville', 'GPS y orientación sin conexión', 'Qué comprobar para navegación, batería y comunicación de emergencia.'],
+      ['/trekking-randonnee-quebec-mont-iberville', 'Lista de equipo de senderismo', 'Adapta la mochila a la duración, la temporada y la distancia de los servicios.'],
+    ] },
+    faqTitle: 'Preguntas frecuentes',
+    faq: [
+      ['¿Cómo selecciona TOUSKI el equipo?', 'Evaluamos utilidad en el terreno, durabilidad, mantenimiento, peso y adaptación a las estaciones canadienses.'],
+      ['¿Un teléfono siempre sustituye a un GPS?', 'No. Fuera de cobertura, un dispositivo dedicado, un mapa sin conexión y un plan alternativo pueden ser más fiables.'],
+      ['¿Hacen envíos a todo Canadá?', 'Sí. Los plazos y gastos exactos se confirman antes de la compra según la provincia y el producto.'],
+    ],
+    footer: { tagline: 'Equipo útil para aire libre, cabaña y hogar.', rights: 'Todos los derechos reservados.', languages: 'Idiomas' },
+    chat: { title:'Olivia AI', status:'Asistente TOUSKI · En línea', teaser:'¿Necesitas ayuda?', welcome:'Hola, soy Olivia. Puedo ayudarte a comparar equipo.', leadIntro:'Deja tus datos para continuar con Olivia o recibir respuesta de TOUSKI.', firstName:'Nombre', lastName:'Apellido', email:'Correo', phone:'Teléfono', need:'Tu necesidad', sendDetails:'Continuar', detailsSent:'Gracias. Ya puedes hacer tu pregunta.', placeholder:'Tu pregunta…', send:'Enviar', close:'Cerrar', error:'No se pudo enviar el mensaje. Escríbenos a contact@touski.online.' },
+  },
+  de: {
+    lang: 'de', hreflang: 'de-CA', path: '/de', locale: 'de_CA',
+    meta: { title: 'TOUSKI | Berg- und Outdoor-Ausrüstung in Kanada', description: 'In Québec ausgewählte Ausrüstung für Wandern, Orientierung, Sicherheit und autarke Touren in den Bergen, am Chalet und zu Hause.' },
+    nav: { universe: 'Ausrüstung', selection: 'Auswahl', guides: 'Ratgeber', faq: 'Fragen', contact: 'Kontakt', menu: 'Menü', close: 'Schließen' },
+    hero: { eyebrow: 'In Québec ausgewählte Outdoor-Ausrüstung', title: 'Mehr Sicherheit unterwegs, weniger unnötige Ausrüstung.', text: 'TOUSKI wählt zuverlässige Ausrüstung für Wandern, Orientierung und Sicherheit in abgelegenen Gebieten aus – passend zu kanadischen Bedingungen.', primary: 'Auswahl entdecken', secondary: 'Tour vorbereiten', imageAlt: 'Wanderer vor einer Bergkette bei Sonnenaufgang' },
+    intro: { eyebrow: 'Unsere Schwerpunkte', title: 'Ausrüstung für konkrete Anforderungen.', text: 'Jede Kategorie löst ein praktisches Problem: Navigation ohne Netz, Sichtbarkeit, Wasser- und Energieversorgung oder Komfort im Camp.' },
+    pillars: [
+      ['Navigation ohne Netz', 'GPS-Geräte, Karten und Orientierungshilfen für Gebiete, in denen ein Smartphone nicht ausreicht.'],
+      ['Sicherheit am Berg', 'Beleuchtung, Signalmittel und Notfallzubehör für schnell wechselndes Wetter.'],
+      ['Autark unterwegs', 'Leichte Lösungen für Wasser, Energie, Reparaturen und mehrtägige Touren.'],
+      ['Chalet und Zuhause', 'Einfache, robuste Produkte, die auch nach der Tour nützlich bleiben.'],
+    ],
+    selection: { eyebrow: 'Auswahl', title: 'Drei Ausrüstungsbereiche im Vergleich', text: 'Wir achten zuerst auf Nutzen, Haltbarkeit und einfache Pflege.' },
+    products: [
+      ['Navigation und GPS', 'Akkulaufzeit, Lesbarkeit, Kältefestigkeit und echte Offline-Funktionen vergleichen.', 'Hand-GPS in einer Berglandschaft'],
+      ['Beobachtung und Sicherheit', 'Reichweite, Vorschriften und Einsatzgrenzen vor der Nutzung prüfen.', 'Beobachtungsausrüstung in einem abgelegenen Tal'],
+      ['Schutz und Camp', 'Nach Jahreszeit, Gewicht und erwarteter Exposition auswählen.', 'Campingausrüstung in der Nähe der Berge'],
+    ],
+    guides: { eyebrow: 'Praxistipps', title: 'Erst planen, dann kaufen', text: 'Die ausführlichen Ratgeber sind derzeit auf Französisch verfügbar und behandeln Touren in Québec.', cards: [
+      ['/equipement-montagne-quebec-mont-iberville', 'Bergausrüstung auswählen', 'Eine Methode auf Basis von Route, Wetter, Autarkie und Alternativplänen.'],
+      ['/gps-haute-montagne-quebec-mont-iberville', 'GPS und Offline-Navigation', 'Wichtige Kriterien für Navigation, Akku und Notfallkommunikation.'],
+      ['/trekking-randonnee-quebec-mont-iberville', 'Packliste zum Wandern', 'Die Ausrüstung an Dauer, Jahreszeit und Entfernung zu Diensten anpassen.'],
+    ] },
+    faqTitle: 'Häufige Fragen',
+    faq: [
+      ['Wie wählt TOUSKI Ausrüstung aus?', 'Wir bewerten Nutzen im Gelände, Haltbarkeit, Pflege, Gewicht und Eignung für kanadische Jahreszeiten.'],
+      ['Ersetzt ein Smartphone immer ein GPS?', 'Nein. Ohne Mobilfunk können ein eigenes Gerät, Offline-Karten und ein Notfallplan zuverlässiger sein.'],
+      ['Liefern Sie in ganz Kanada?', 'Ja. Lieferzeit und Kosten werden vor dem Kauf je nach Provinz und Produkt bestätigt.'],
+    ],
+    footer: { tagline: 'Nützliche Ausrüstung für draußen, Chalet und Zuhause.', rights: 'Alle Rechte vorbehalten.', languages: 'Sprachen' },
+    chat: { title:'Olivia AI', status:'TOUSKI-Assistentin · Online', teaser:'Brauchen Sie Hilfe?', welcome:'Hallo, ich bin Olivia. Ich helfe Ihnen beim Vergleich von Ausrüstung.', leadIntro:'Hinterlassen Sie Ihre Daten, um fortzufahren oder von TOUSKI kontaktiert zu werden.', firstName:'Vorname', lastName:'Nachname', email:'E-Mail', phone:'Telefon', need:'Ihr Bedarf', sendDetails:'Weiter', detailsSent:'Danke. Sie können jetzt Ihre Frage stellen.', placeholder:'Ihre Frage…', send:'Senden', close:'Schließen', error:'Die Nachricht konnte nicht gesendet werden. Schreiben Sie an contact@touski.online.' },
+  },
+}
+
+export const navLinks = (locale) => sharedLinks.map((link) => ({ ...link, label: locale.nav[link.key] }))

@@ -1,0 +1,78 @@
+---
+import '../styles.css'
+import { site } from '../data/site.js'
+
+const {
+  title,
+  description,
+  lang = 'fr',
+  locale = 'fr_CA',
+  canonicalPath = '/',
+  alternates = {},
+  image = '/og-image.webp',
+  noIndex = false,
+  schemas = [],
+} = Astro.props
+
+const canonical = new URL(canonicalPath, site.url).href
+const socialImage = new URL(image, site.url).href
+const alternateLinks = Object.entries(alternates as Record<string, string>)
+const baseSchemas = [{
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: site.name,
+  url: site.url,
+  logo: new URL('/favicon.svg', site.url).href,
+  email: site.email,
+  telephone: site.phone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '1030, Avenue Muguette',
+    addressLocality: 'Saint-Élie-de-Caxton',
+    addressRegion: 'QC',
+    postalCode: 'G0X 2N0',
+    addressCountry: 'CA',
+  },
+}]
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noIndex ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'} />
+    <meta name="author" content="TOUSKI" />
+    <meta name="theme-color" content="#08110d" />
+    <link rel="canonical" href={canonical} />
+    {alternateLinks.map(([hreflang, path]) => <link rel="alternate" hreflang={hreflang} href={new URL(path, site.url).href} />)}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:site_name" content="TOUSKI" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="TOUSKI — équipement de plein air sélectionné au Québec" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+
+    {[...baseSchemas, ...schemas].map((schema) => <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />)}
+    <script is:inline id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="49f564fb-d021-4c07-ba93-f40eadc00ece" data-blockingmode="auto"></script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-QRPVJD0JPG"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments)}
+      gtag('js', new Date());
+      gtag('config', 'G-QRPVJD0JPG');
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
