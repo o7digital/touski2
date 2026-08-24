@@ -36,6 +36,12 @@ export const locales = {
       text: 'TOUSKI sélectionne des équipements fiables pour la randonnée, l’orientation et la sécurité en terrain isolé, avec des conseils adaptés aux conditions québécoises.',
       primary: 'Découvrir la sélection', secondary: 'Préparer une sortie', imageAlt: 'Randonneur devant une chaîne de montagnes au lever du jour',
     },
+    slides: [
+      ['Trekking & nature', 'Terrain, altitude et liberté de mouvement.', 'Du matériel pensé pour avancer avec confiance sur les sentiers québécois.', 'Trekking • Randonnée • Nature', 'Randonnée & trekking', 'Outdoor utile'],
+      ['Altitude & sécurité', 'GPS haute montagne et autonomie réelle.', 'Navigation hors réseau, autonomie et solutions de secours pour les terrains exigeants.', 'GPS • Sécurité • Autonomie', 'GPS haute montagne', 'Orientation & confiance'],
+      ['Alpinisme & équipement', 'Protection technique pour les conditions difficiles.', 'Choisir selon la saison, le froid, le vent, l’exposition et le poids transporté.', 'Alpinisme • Protection • Bivouac', 'Équipement technique', 'Protection & performance'],
+      ['Exploration & observation', 'Repérage terrain et autonomie en conditions réelles.', 'Des outils d’observation et de sécurité utilisés dans le respect des règles applicables.', 'Exploration • Observation • Sécurité', 'Sécurité outdoor', 'Terrain & autonomie'],
+    ],
     intro: { eyebrow: 'Nos priorités', title: 'Du matériel choisi pour résoudre de vrais besoins.', text: 'Chaque catégorie répond à une situation concrète : s’orienter hors réseau, rester visible, gérer l’eau et l’énergie ou améliorer le confort au camp.' },
     pillars: [
       ['Orientation hors réseau', 'GPS, cartes et outils de repérage pour garder le cap lorsque le téléphone ne suffit plus.'],
@@ -43,6 +49,22 @@ export const locales = {
       ['Autonomie en randonnée', 'Solutions légères pour l’eau, l’énergie, les réparations et les sorties de plusieurs jours.'],
       ['Chalet et maison', 'Produits robustes et simples qui restent utiles après le retour du sentier.'],
     ],
+    categories: { eyebrow: 'Catégories', title: 'Ce qu’il faut, là où ça compte.', text: 'Six univers pour préparer le sentier, le camp, le chalet et les imprévus du quotidien.', items: [
+      ['Randonnée & trekking', 'Sacs, accessoires et essentiels adaptés à la durée et au terrain.'],
+      ['GPS & orientation', 'Navigation hors réseau, cartographie et solutions de repérage.'],
+      ['Alpinisme & protection', 'Équipement technique choisi selon l’exposition et la saison.'],
+      ['Observation outdoor', 'Outils de repérage, inspection et documentation dans le respect de la réglementation.'],
+      ['Vie au chalet', 'Énergie, éclairage, eau, chaleur et réparations utiles en zone isolée.'],
+      ['Maison & autonomie', 'Produits robustes pour l’entretien, l’organisation et les urgences.'],
+    ] },
+    useCases: { eyebrow: 'Usages réels', title: 'Choisi pour le terrain, pas pour remplir une étagère.', items: [
+      ['Préparer une sortie', 'Évaluer itinéraire, météo, durée, eau, énergie et solutions de repli avant l’achat.'],
+      ['Rester autonome', 'Réduire la dépendance au réseau cellulaire et prévoir des options de secours.'],
+      ['Équiper chalet et maison', 'Conserver des solutions simples pour le froid, les pannes et les imprévus.'],
+    ] },
+    vision: { eyebrow: 'Vision TOUSKI', title: 'Une marque d’indispensables, pas une simple boutique.', text: 'Nous privilégions les produits compréhensibles, réparables et réellement utiles. Une recommandation doit partir du besoin, du terrain et des limites du matériel — jamais d’une promesse exagérée.' },
+    service: { title: 'Livraison et retours', text: 'Les frais, délais, disponibilités et conditions de retour sont confirmés avant la commande selon le produit et la province. Contactez TOUSKI pour obtenir les conditions applicables à votre achat.' },
+    legal: { title: 'Mentions légales et confidentialité', text: 'Les renseignements transmis servent uniquement à répondre aux demandes et assurer le suivi client. Vous pouvez demander l’accès, la rectification ou la suppression de vos renseignements en écrivant à contact@touski.online.' },
     selection: { eyebrow: 'Sélection', title: 'Trois familles d’équipement à comparer', text: 'Nous privilégions l’usage, la durabilité et la facilité d’entretien avant les fonctions superflues.' },
     products: [
       ['Orientation et GPS', 'Comparer l’autonomie, la lisibilité, la résistance au froid et les fonctions réellement disponibles hors réseau.', 'Récepteur GPS tenu en main dans un environnement montagneux'],
@@ -68,6 +90,12 @@ export const locales = {
     meta: { title: 'TOUSKI | Mountain and outdoor gear in Canada', description: 'Hiking, navigation, safety and self-reliance gear selected in Quebec for mountain trips, cabins and everyday use.' },
     nav: { universe: 'Gear', selection: 'Selection', guides: 'Guides', faq: 'FAQ', contact: 'Contact', menu: 'Menu', close: 'Close' },
     hero: { eyebrow: 'Outdoor gear selected in Quebec', title: 'More confidence on the trail, less unnecessary gear.', text: 'TOUSKI selects dependable equipment for hiking, navigation and safety in remote terrain, with advice suited to Canadian conditions.', primary: 'Explore the selection', secondary: 'Plan a trip', imageAlt: 'Hiker facing a mountain range at sunrise' },
+    slides: [
+      ['Trekking & nature', 'Terrain, altitude and freedom of movement.', 'Useful gear for moving confidently across Canadian trails.', 'Trekking • Hiking • Nature', 'Hiking & trekking', 'Useful outdoor gear'],
+      ['Altitude & safety', 'High-altitude GPS and practical autonomy.', 'Off-grid navigation, battery life and backup options for demanding terrain.', 'GPS • Safety • Autonomy', 'Mountain GPS', 'Navigation & confidence'],
+      ['Mountaineering & gear', 'Technical protection for difficult conditions.', 'Choose according to season, cold, wind, exposure and carried weight.', 'Mountaineering • Protection • Camp', 'Technical gear', 'Protection & performance'],
+      ['Exploration & observation', 'Terrain awareness in real conditions.', 'Observation and safety tools used within applicable regulations.', 'Exploration • Observation • Safety', 'Outdoor safety', 'Terrain & autonomy'],
+    ],
     intro: { eyebrow: 'Our priorities', title: 'Gear selected to solve real outdoor needs.', text: 'Each category addresses a practical situation: navigating off-grid, staying visible, managing water and power, or improving camp comfort.' },
     pillars: [
       ['Off-grid navigation', 'GPS devices, maps and navigation tools for places where a phone alone is not enough.'],
@@ -75,6 +103,13 @@ export const locales = {
       ['Hiking self-reliance', 'Lightweight solutions for water, power, repairs and multi-day trips.'],
       ['Cabin and home', 'Simple, durable products that remain useful after the trail.'],
     ],
+    categories: { eyebrow: 'Categories', title: 'The right essentials where they matter.', text: 'Six areas covering the trail, camp, cabin and everyday contingencies.', items: [
+      ['Hiking & trekking', 'Packs, accessories and essentials suited to trip length and terrain.'], ['GPS & navigation', 'Off-grid navigation, mapping and location tools.'], ['Mountaineering & protection', 'Technical equipment selected for exposure and season.'], ['Outdoor observation', 'Tools for scouting, inspection and documentation within applicable rules.'], ['Cabin life', 'Power, lighting, water, warmth and practical repairs in remote locations.'], ['Home & autonomy', 'Durable products for maintenance, organization and emergencies.'],
+    ] },
+    useCases: { eyebrow: 'Real uses', title: 'Selected for the field, not to fill a shelf.', items: [['Plan a trip', 'Assess route, weather, duration, water, power and backup plans before buying.'], ['Stay self-reliant', 'Reduce dependence on cellular service and keep practical backup options.'], ['Equip cabin and home', 'Keep straightforward solutions for cold, outages and unexpected situations.']] },
+    vision: { eyebrow: 'TOUSKI vision', title: 'A brand of useful essentials, not just a store.', text: 'We prioritize understandable, durable and genuinely useful products. Recommendations begin with the need, terrain and equipment limits — never exaggerated promises.' },
+    service: { title: 'Shipping and returns', text: 'Fees, timeframes, availability and return conditions are confirmed before purchase according to product and province. Contact TOUSKI for the terms applicable to your order.' },
+    legal: { title: 'Legal and privacy', text: 'Information submitted is used only to answer requests and provide customer follow-up. You may request access, correction or deletion by emailing contact@touski.online.' },
     selection: { eyebrow: 'Selection', title: 'Three gear families worth comparing', text: 'We prioritize practical use, durability and easy maintenance over unnecessary features.' },
     products: [
       ['Navigation and GPS', 'Compare battery life, screen readability, cold resistance and features that truly work off-grid.', 'Handheld GPS receiver in a mountain environment'],
@@ -100,6 +135,9 @@ export const locales = {
     meta: { title: 'TOUSKI | Equipo de montaña y aire libre en Canadá', description: 'Equipo de senderismo, orientación, seguridad y autonomía seleccionado en Quebec para la montaña, la cabaña y el hogar.' },
     nav: { universe: 'Equipo', selection: 'Selección', guides: 'Guías', faq: 'Preguntas', contact: 'Contacto', menu: 'Menú', close: 'Cerrar' },
     hero: { eyebrow: 'Equipo de aire libre seleccionado en Quebec', title: 'Más autonomía en el sendero, menos equipo innecesario.', text: 'TOUSKI selecciona equipo fiable para senderismo, orientación y seguridad en zonas remotas, con consejos adaptados a las condiciones canadienses.', primary: 'Ver la selección', secondary: 'Preparar una salida', imageAlt: 'Senderista frente a una cordillera al amanecer' },
+    slides: [
+      ['Trekking y naturaleza', 'Terreno, altitud y libertad de movimiento.', 'Equipo útil para avanzar con confianza por los senderos canadienses.', 'Trekking • Senderismo • Naturaleza', 'Senderismo y trekking', 'Outdoor útil'], ['Altitud y seguridad', 'GPS de montaña y autonomía práctica.', 'Navegación sin red, batería y opciones de respaldo para terrenos exigentes.', 'GPS • Seguridad • Autonomía', 'GPS de montaña', 'Orientación y confianza'], ['Alpinismo y equipo', 'Protección técnica para condiciones difíciles.', 'Elegir según temporada, frío, viento, exposición y peso transportado.', 'Alpinismo • Protección • Campamento', 'Equipo técnico', 'Protección y rendimiento'], ['Exploración y observación', 'Reconocimiento del terreno en condiciones reales.', 'Herramientas de observación y seguridad utilizadas según la normativa.', 'Exploración • Observación • Seguridad', 'Seguridad outdoor', 'Terreno y autonomía'],
+    ],
     intro: { eyebrow: 'Nuestras prioridades', title: 'Equipo elegido para necesidades reales.', text: 'Cada categoría responde a una situación concreta: orientarse sin red, mantenerse visible, gestionar agua y energía o mejorar el campamento.' },
     pillars: [
       ['Orientación sin conexión', 'GPS, mapas y herramientas de navegación para lugares donde el teléfono no es suficiente.'],
@@ -107,6 +145,11 @@ export const locales = {
       ['Autonomía en ruta', 'Soluciones ligeras para agua, energía, reparaciones y travesías de varios días.'],
       ['Cabaña y hogar', 'Productos sencillos y duraderos que siguen siendo útiles después de la ruta.'],
     ],
+    categories: { eyebrow: 'Categorías', title: 'Lo necesario, donde realmente importa.', text: 'Seis universos para sendero, campamento, cabaña e imprevistos cotidianos.', items: [['Senderismo y trekking', 'Mochilas, accesorios y esenciales según duración y terreno.'], ['GPS y orientación', 'Navegación sin conexión, mapas y herramientas de localización.'], ['Alpinismo y protección', 'Equipo técnico según exposición y temporada.'], ['Observación outdoor', 'Herramientas de reconocimiento, inspección y documentación dentro de la normativa.'], ['Vida en la cabaña', 'Energía, iluminación, agua, calor y reparaciones útiles.'], ['Hogar y autonomía', 'Productos duraderos para mantenimiento, organización y emergencias.']] },
+    useCases: { eyebrow: 'Usos reales', title: 'Elegido para el terreno, no para llenar una estantería.', items: [['Preparar una salida', 'Evaluar ruta, clima, duración, agua, energía y alternativas antes de comprar.'], ['Mantener la autonomía', 'Reducir la dependencia de la red móvil y prever soluciones de respaldo.'], ['Equipar cabaña y hogar', 'Conservar soluciones simples para frío, cortes e imprevistos.']] },
+    vision: { eyebrow: 'Visión TOUSKI', title: 'Una marca de esenciales útiles, no solo una tienda.', text: 'Priorizamos productos comprensibles, duraderos y realmente útiles. La recomendación parte de la necesidad, el terreno y los límites del equipo.' },
+    service: { title: 'Envíos y devoluciones', text: 'Gastos, plazos, disponibilidad y devoluciones se confirman antes de la compra según producto y provincia. Contacta con TOUSKI para conocer las condiciones aplicables.' },
+    legal: { title: 'Aviso legal y privacidad', text: 'Los datos enviados se utilizan únicamente para responder y realizar el seguimiento. Puedes solicitar acceso, corrección o eliminación escribiendo a contact@touski.online.' },
     selection: { eyebrow: 'Selección', title: 'Tres familias de equipo para comparar', text: 'Priorizamos la utilidad, la durabilidad y el mantenimiento sencillo.' },
     products: [
       ['Orientación y GPS', 'Compara autonomía, legibilidad, resistencia al frío y funciones disponibles sin conexión.', 'Receptor GPS de mano en un entorno montañoso'],
@@ -132,6 +175,9 @@ export const locales = {
     meta: { title: 'TOUSKI | Berg- und Outdoor-Ausrüstung in Kanada', description: 'In Québec ausgewählte Ausrüstung für Wandern, Orientierung, Sicherheit und autarke Touren in den Bergen, am Chalet und zu Hause.' },
     nav: { universe: 'Ausrüstung', selection: 'Auswahl', guides: 'Ratgeber', faq: 'Fragen', contact: 'Kontakt', menu: 'Menü', close: 'Schließen' },
     hero: { eyebrow: 'In Québec ausgewählte Outdoor-Ausrüstung', title: 'Mehr Sicherheit unterwegs, weniger unnötige Ausrüstung.', text: 'TOUSKI wählt zuverlässige Ausrüstung für Wandern, Orientierung und Sicherheit in abgelegenen Gebieten aus – passend zu kanadischen Bedingungen.', primary: 'Auswahl entdecken', secondary: 'Tour vorbereiten', imageAlt: 'Wanderer vor einer Bergkette bei Sonnenaufgang' },
+    slides: [
+      ['Trekking & Natur', 'Gelände, Höhe und Bewegungsfreiheit.', 'Nützliche Ausrüstung für kanadische Wanderwege.', 'Trekking • Wandern • Natur', 'Wandern & Trekking', 'Nützliche Outdoor-Ausrüstung'], ['Höhe & Sicherheit', 'Hochgebirgs-GPS und praktische Autarkie.', 'Navigation ohne Netz, Akkulaufzeit und Rückfalloptionen für anspruchsvolles Gelände.', 'GPS • Sicherheit • Autarkie', 'Hochgebirgs-GPS', 'Orientierung & Vertrauen'], ['Bergsteigen & Ausrüstung', 'Technischer Schutz für schwierige Bedingungen.', 'Auswahl nach Jahreszeit, Kälte, Wind, Exposition und Gewicht.', 'Bergsteigen • Schutz • Camp', 'Technische Ausrüstung', 'Schutz & Leistung'], ['Erkundung & Beobachtung', 'Geländeerfassung unter realen Bedingungen.', 'Beobachtungs- und Sicherheitswerkzeuge im Rahmen geltender Regeln.', 'Erkundung • Beobachtung • Sicherheit', 'Outdoor-Sicherheit', 'Gelände & Autarkie'],
+    ],
     intro: { eyebrow: 'Unsere Schwerpunkte', title: 'Ausrüstung für konkrete Anforderungen.', text: 'Jede Kategorie löst ein praktisches Problem: Navigation ohne Netz, Sichtbarkeit, Wasser- und Energieversorgung oder Komfort im Camp.' },
     pillars: [
       ['Navigation ohne Netz', 'GPS-Geräte, Karten und Orientierungshilfen für Gebiete, in denen ein Smartphone nicht ausreicht.'],
@@ -139,6 +185,11 @@ export const locales = {
       ['Autark unterwegs', 'Leichte Lösungen für Wasser, Energie, Reparaturen und mehrtägige Touren.'],
       ['Chalet und Zuhause', 'Einfache, robuste Produkte, die auch nach der Tour nützlich bleiben.'],
     ],
+    categories: { eyebrow: 'Kategorien', title: 'Das Richtige dort, wo es zählt.', text: 'Sechs Bereiche für Weg, Camp, Chalet und alltägliche Zwischenfälle.', items: [['Wandern & Trekking', 'Rucksäcke, Zubehör und Essentials passend zu Dauer und Gelände.'], ['GPS & Navigation', 'Offline-Navigation, Karten und Ortungswerkzeuge.'], ['Bergsteigen & Schutz', 'Technische Ausrüstung nach Exposition und Jahreszeit.'], ['Outdoor-Beobachtung', 'Werkzeuge für Erkundung, Inspektion und Dokumentation im Rahmen der Vorschriften.'], ['Leben im Chalet', 'Energie, Licht, Wasser, Wärme und praktische Reparaturen.'], ['Zuhause & Autarkie', 'Robuste Produkte für Wartung, Organisation und Notfälle.']] },
+    useCases: { eyebrow: 'Reale Einsätze', title: 'Für das Gelände gewählt, nicht fürs Regal.', items: [['Tour vorbereiten', 'Route, Wetter, Dauer, Wasser, Energie und Alternativen vor dem Kauf prüfen.'], ['Autark bleiben', 'Abhängigkeit vom Mobilfunk verringern und Rückfalloptionen vorsehen.'], ['Chalet und Zuhause ausstatten', 'Einfache Lösungen für Kälte, Ausfälle und Unerwartetes bereithalten.']] },
+    vision: { eyebrow: 'TOUSKI-Vision', title: 'Eine Marke für nützliche Essentials, nicht nur ein Shop.', text: 'Wir bevorzugen verständliche, langlebige und wirklich nützliche Produkte. Empfehlungen beginnen bei Bedarf, Gelände und Grenzen der Ausrüstung.' },
+    service: { title: 'Versand und Rückgabe', text: 'Kosten, Fristen, Verfügbarkeit und Rückgabebedingungen werden vor dem Kauf je nach Produkt und Provinz bestätigt. Kontaktieren Sie TOUSKI für die geltenden Bedingungen.' },
+    legal: { title: 'Rechtliches und Datenschutz', text: 'Übermittelte Angaben werden nur zur Beantwortung und Kundenbetreuung verwendet. Zugang, Berichtigung oder Löschung können Sie über contact@touski.online verlangen.' },
     selection: { eyebrow: 'Auswahl', title: 'Drei Ausrüstungsbereiche im Vergleich', text: 'Wir achten zuerst auf Nutzen, Haltbarkeit und einfache Pflege.' },
     products: [
       ['Navigation und GPS', 'Akkulaufzeit, Lesbarkeit, Kältefestigkeit und echte Offline-Funktionen vergleichen.', 'Hand-GPS in einer Berglandschaft'],

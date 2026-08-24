@@ -38,7 +38,8 @@ const schemas = [
       </div>
       <Header content={content} home={true} />
       <div class="shell relative z-10 flex min-h-[calc(92svh-100px)] items-end pb-16 pt-32 md:pb-24">
-        <div class="max-w-5xl">
+        <div class="grid w-full items-end gap-10 lg:grid-cols-[1.25fr_.75fr]">
+          <div>
           <p class="eyebrow">{content.hero.eyebrow}</p>
           <h1 class="balanced mt-5 text-5xl font-semibold leading-[.98] tracking-tight sm:text-6xl lg:text-8xl">{content.hero.title}</h1>
           <p class="mt-7 max-w-3xl text-lg leading-8 text-white/82 md:text-xl">{content.hero.text}</p>
@@ -53,7 +54,27 @@ const schemas = [
             </div>
             <button data-hero-next type="button" class="glass grid size-10 place-items-center rounded-full text-lg transition hover:bg-white/15" aria-label={sliderLabels.next}>›</button>
           </div>
+          </div>
+          <div class="relative min-h-72">
+            {content.slides.map(([eyebrow, title, text, accent, tag1, tag2]: [string, string, string, string, string, string], index: number) => (
+              <article data-hero-card aria-hidden={index === 0 ? 'false' : 'true'} class:list={['hero-card glass absolute inset-x-0 bottom-0 rounded-3xl p-6 md:p-7', { 'is-active': index === 0 }]}>
+                <p class="text-[10px] font-bold uppercase tracking-[.28em] text-orange-200">{eyebrow}</p>
+                <h2 class="mt-3 text-2xl font-semibold leading-tight md:text-3xl">{title}</h2>
+                <p class="mt-3 text-sm leading-7 text-white/75">{text}</p>
+                <p class="mt-4 text-xs uppercase tracking-[.2em] text-white/55">{accent}</p>
+                <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs">{tag1}</span><span class="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs">{tag2}</span></div>
+              </article>
+            ))}
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="categories" class="border-y border-white/10 bg-white/[.03] py-20 md:py-28">
+      <div class="shell">
+        <p class="eyebrow">{content.categories.eyebrow}</p>
+        <div class="mt-4 grid gap-6 lg:grid-cols-[1fr_.7fr] lg:items-end"><h2 class="balanced text-4xl font-semibold md:text-6xl">{content.categories.title}</h2><p class="leading-8 text-white/65">{content.categories.text}</p></div>
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{content.categories.items.map(([title, text]: [string, string], index: number) => <article class="card rounded-3xl p-7"><p class="text-sm text-orange-200/65">0{index + 1}</p><h3 class="mt-4 text-xl font-semibold">{title}</h3><p class="mt-3 text-sm leading-7 text-white/65">{text}</p></article>)}</div>
       </div>
     </section>
 
@@ -64,6 +85,16 @@ const schemas = [
           {content.pillars.map(([title, text]: [string, string], index: number) => <article class="card rounded-3xl p-7"><p class="text-sm text-orange-200/70">0{index + 1}</p><h3 class="mt-4 text-2xl font-semibold">{title}</h3><p class="mt-3 leading-7 text-white/65">{text}</p></article>)}
         </div>
       </div>
+    </section>
+
+    <section class="shell py-20 md:py-28">
+      <p class="eyebrow">{content.useCases.eyebrow}</p>
+      <h2 class="balanced mt-4 max-w-4xl text-4xl font-semibold md:text-6xl">{content.useCases.title}</h2>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">{content.useCases.items.map(([title, text]) => <article class="card rounded-3xl p-7"><h3 class="text-2xl font-semibold">{title}</h3><p class="mt-4 leading-7 text-white/65">{text}</p></article>)}</div>
+    </section>
+
+    <section id="vision" class="border-y border-white/10 bg-[#e7dfcf] py-20 text-[#132018] md:py-28">
+      <div class="shell grid gap-8 lg:grid-cols-[.65fr_1fr]"><p class="text-xs font-bold uppercase tracking-[.24em] text-[#6a4c30]">{content.vision.eyebrow}</p><div><h2 class="balanced text-4xl font-semibold md:text-6xl">{content.vision.title}</h2><p class="mt-6 max-w-3xl text-lg leading-8 text-[#132018]/70">{content.vision.text}</p></div></div>
     </section>
 
     <section id="selection" class="border-y border-white/10 bg-[#0b1712] py-20 md:py-28">
@@ -101,6 +132,7 @@ const schemas = [
     if (!(slider instanceof HTMLElement) || slider.dataset.ready) return
     slider.dataset.ready = 'true'
     const slides = [...slider.querySelectorAll('[data-hero-slide]')]
+    const cards = [...slider.querySelectorAll('[data-hero-card]')]
     const dots = [...slider.querySelectorAll('[data-hero-dot]')]
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     let active = 0
@@ -111,6 +143,10 @@ const schemas = [
       slides.forEach((slide, index) => {
         slide.classList.toggle('is-active', index === active)
         slide.setAttribute('aria-hidden', String(index !== active))
+      })
+      cards.forEach((card, index) => {
+        card.classList.toggle('is-active', index === active)
+        card.setAttribute('aria-hidden', String(index !== active))
       })
       dots.forEach((dot, index) => {
         dot.classList.toggle('is-active', index === active)

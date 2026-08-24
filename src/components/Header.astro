@@ -1,7 +1,7 @@
 ---
 import { Picture } from 'astro:assets'
 import logo from '../assets/touski-logo.jpeg'
-import { navLinks } from '../data/site.js'
+import { locales, navLinks } from '../data/site.js'
 
 const { content, home = false } = Astro.props
 const prefix = home ? '' : '/'
@@ -16,6 +16,7 @@ const links = navLinks(content)
     <nav class="hidden items-center gap-6 text-sm text-white/80 md:flex" aria-label="Navigation principale">
       {links.map((link) => <a href={`${prefix}${link.href}`} class="transition hover:text-white">{link.label}</a>)}
       <a href="/contact" class="transition hover:text-white">{content.nav.contact}</a>
+      <div class="flex gap-1">{Object.values(locales).filter((locale) => locale.lang !== content.lang).map((locale) => <a href={locale.path} hreflang={locale.hreflang} class="rounded-full border border-white/20 px-2.5 py-1 text-[10px] font-semibold uppercase hover:bg-white/10">{locale.lang}</a>)}</div>
     </nav>
     <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" class="rounded-full border border-white/25 px-4 py-2 text-xs font-semibold uppercase tracking-[.16em] md:hidden">
       {content.nav.menu}
@@ -25,6 +26,7 @@ const links = navLinks(content)
     <div class="flex flex-col gap-4 text-sm text-white/85">
       {links.map((link) => <a href={`${prefix}${link.href}`}>{link.label}</a>)}
       <a href="/contact">{content.nav.contact}</a>
+      <div class="mt-2 flex flex-wrap gap-2">{Object.values(locales).map((locale) => <a href={locale.path} hreflang={locale.hreflang} class="rounded-full border border-white/20 px-3 py-2 text-xs uppercase">{locale.lang}</a>)}</div>
     </div>
   </nav>
 </header>
