@@ -82,7 +82,9 @@ export const locales = {
       ['Un téléphone remplace-t-il toujours un GPS?', 'Non. Hors couverture, un appareil dédié, une carte hors ligne et une solution de secours peuvent offrir davantage d’autonomie et de fiabilité.'],
       ['Livrez-vous partout au Canada?', 'Oui. Les délais et frais exacts sont confirmés avant la commande selon la province et le produit.'],
     ],
-    footer: { tagline: 'Équipement utile pour le plein air, le chalet et la maison.', rights: 'Tous droits réservés.', languages: 'Langues' },
+    footer: { tagline: 'Équipement utile pour le plein air, le chalet et la maison.', rights: 'Tous droits réservés.', languages: 'Langues', keywords: [
+      'équipement montagne Québec', 'équipement plein air Québec', 'matériel randonnée Québec', 'équipement trekking Québec', 'GPS randonnée Québec', 'GPS haute montagne Québec', 'navigation hors réseau Québec', 'sécurité outdoor Québec', 'équipement alpinisme Québec', 'autonomie plein air Québec', 'équipement chalet Québec', 'essentiels maison et chalet Québec', 'équipement Mont d’Iberville', 'plein air Mauricie',
+    ] },
     chat: { title:'Olivia AI', status:'Assistante TOUSKI · En ligne', teaser:'Besoin d’aide?', welcome:'Bonjour, je suis Olivia. Je peux vous aider à comparer votre équipement.', leadIntro:'Laissez vos coordonnées pour poursuivre avec Olivia ou être rappelé par TOUSKI.', firstName:'Prénom', lastName:'Nom', email:'Courriel', phone:'Téléphone', need:'Votre besoin', sendDetails:'Continuer', detailsSent:'Merci. Posez maintenant votre question.', manual:'Un membre de l’équipe TOUSKI a repris la conversation et vous répondra ici.', placeholder:'Votre question…', send:'Envoyer', close:'Fermer', error:'Le message n’a pas pu être envoyé. Écrivez-nous à contact@touski.online.' },
   },
   en: {
@@ -127,7 +129,9 @@ export const locales = {
       ['Does a phone always replace a GPS?', 'No. Outside cellular coverage, a dedicated device, offline map and backup plan can offer better endurance and reliability.'],
       ['Do you ship across Canada?', 'Yes. Exact timeframes and fees are confirmed before purchase according to province and product.'],
     ],
-    footer: { tagline: 'Useful gear for the outdoors, cabin and home.', rights: 'All rights reserved.', languages: 'Languages' },
+    footer: { tagline: 'Useful gear for the outdoors, cabin and home.', rights: 'All rights reserved.', languages: 'Languages', keywords: [
+      'mountain gear Quebec', 'outdoor equipment Quebec', 'hiking gear Quebec', 'trekking equipment Quebec', 'hiking GPS Quebec', 'high-altitude GPS Quebec', 'off-grid navigation Canada', 'outdoor safety equipment Quebec', 'mountaineering gear Quebec', 'outdoor self-reliance Quebec', 'cabin equipment Quebec', 'home and cabin essentials Canada', 'Mount Iberville equipment', 'outdoor gear Mauricie',
+    ] },
     chat: { title:'Olivia AI', status:'TOUSKI assistant · Online', teaser:'Need help?', welcome:'Hello, I’m Olivia. I can help you compare outdoor equipment.', leadIntro:'Leave your details to continue with Olivia or hear from TOUSKI.', firstName:'First name', lastName:'Last name', email:'Email', phone:'Phone', need:'Your needs', sendDetails:'Continue', detailsSent:'Thank you. You can now ask your question.', manual:'A TOUSKI team member has taken over the conversation and will reply here.', placeholder:'Your question…', send:'Send', close:'Close', error:'The message could not be sent. Email us at contact@touski.online.' },
   },
   es: {
@@ -167,7 +171,9 @@ export const locales = {
       ['¿Un teléfono siempre sustituye a un GPS?', 'No. Fuera de cobertura, un dispositivo dedicado, un mapa sin conexión y un plan alternativo pueden ser más fiables.'],
       ['¿Hacen envíos a todo Canadá?', 'Sí. Los plazos y gastos exactos se confirman antes de la compra según la provincia y el producto.'],
     ],
-    footer: { tagline: 'Equipo útil para aire libre, cabaña y hogar.', rights: 'Todos los derechos reservados.', languages: 'Idiomas' },
+    footer: { tagline: 'Equipo útil para aire libre, cabaña y hogar.', rights: 'Todos los derechos reservados.', languages: 'Idiomas', keywords: [
+      'equipo de montaña Quebec', 'equipo outdoor Quebec', 'material de senderismo Quebec', 'equipo de trekking Quebec', 'GPS para senderismo Quebec', 'GPS de alta montaña Quebec', 'navegación sin conexión Canadá', 'seguridad outdoor Quebec', 'equipo de alpinismo Quebec', 'autonomía outdoor Quebec', 'equipo para cabaña Quebec', 'esenciales hogar y cabaña Canadá', 'equipo Monte Iberville', 'aire libre Mauricie',
+    ] },
     chat: { title:'Olivia AI', status:'Asistente TOUSKI · En línea', teaser:'¿Necesitas ayuda?', welcome:'Hola, soy Olivia. Puedo ayudarte a comparar equipo.', leadIntro:'Deja tus datos para continuar con Olivia o recibir respuesta de TOUSKI.', firstName:'Nombre', lastName:'Apellido', email:'Correo', phone:'Teléfono', need:'Tu necesidad', sendDetails:'Continuar', detailsSent:'Gracias. Ya puedes hacer tu pregunta.', manual:'Un miembro del equipo TOUSKI ha retomado la conversación y responderá aquí.', placeholder:'Tu pregunta…', send:'Enviar', close:'Cerrar', error:'No se pudo enviar el mensaje. Escríbenos a contact@touski.online.' },
   },
   de: {
@@ -207,7 +213,9 @@ export const locales = {
       ['Ersetzt ein Smartphone immer ein GPS?', 'Nein. Ohne Mobilfunk können ein eigenes Gerät, Offline-Karten und ein Notfallplan zuverlässiger sein.'],
       ['Liefern Sie in ganz Kanada?', 'Ja. Lieferzeit und Kosten werden vor dem Kauf je nach Provinz und Produkt bestätigt.'],
     ],
-    footer: { tagline: 'Nützliche Ausrüstung für draußen, Chalet und Zuhause.', rights: 'Alle Rechte vorbehalten.', languages: 'Sprachen' },
+    footer: { tagline: 'Nützliche Ausrüstung für draußen, Chalet und Zuhause.', rights: 'Alle Rechte vorbehalten.', languages: 'Sprachen', keywords: [
+      'Bergausrüstung Quebec', 'Outdoor-Ausrüstung Quebec', 'Wanderausrüstung Quebec', 'Trekking-Ausrüstung Quebec', 'Wander-GPS Quebec', 'Hochgebirgs-GPS Quebec', 'Offline-Navigation Kanada', 'Outdoor-Sicherheit Quebec', 'Bergsteigerausrüstung Quebec', 'Outdoor-Autarkie Quebec', 'Chalet-Ausrüstung Quebec', 'Haus- und Chalet-Essentials Kanada', 'Ausrüstung Mount Iberville', 'Outdoor Mauricie',
+    ] },
     chat: { title:'Olivia AI', status:'TOUSKI-Assistentin · Online', teaser:'Brauchen Sie Hilfe?', welcome:'Hallo, ich bin Olivia. Ich helfe Ihnen beim Vergleich von Ausrüstung.', leadIntro:'Hinterlassen Sie Ihre Daten, um fortzufahren oder von TOUSKI kontaktiert zu werden.', firstName:'Vorname', lastName:'Nachname', email:'E-Mail', phone:'Telefon', need:'Ihr Bedarf', sendDetails:'Weiter', detailsSent:'Danke. Sie können jetzt Ihre Frage stellen.', manual:'Ein Mitglied des TOUSKI-Teams hat das Gespräch übernommen und antwortet Ihnen hier.', placeholder:'Ihre Frage…', send:'Senden', close:'Schließen', error:'Die Nachricht konnte nicht gesendet werden. Schreiben Sie an contact@touski.online.' },
   },
 }

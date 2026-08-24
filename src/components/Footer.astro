@@ -28,5 +28,8 @@ const { content } = Astro.props
       <p>© {new Date().getFullYear()} TOUSKI. {content.footer.rights}</p>
       <a href="/mentions-legales" class="transition hover:text-white">Mentions légales</a>
     </div>
+    <p class="shell mt-6 text-center text-[10px] leading-6 text-white/30" aria-label="Recherches liées à TOUSKI">
+      {content.footer.keywords.join(' · ')}
+    </p>
   </div>
 </footer>
